@@ -28,10 +28,3 @@ latexmk -xelatex Physics_II.tex
 
 Kết quả là `Physics_II.pdf`. Các file phụ (`.aux`, `.log`, …) đã được bỏ qua trong `.gitignore`.
 
-## PDF
-
-Bản PDF hoàn chỉnh được đăng ở mục **Releases** của repo, không nằm trong mã nguồn.
-
-## Lưu ý
-
-Sách `David Griffiths Electrodynamics.pdf` chỉ dùng để tham khảo cá nhân, có bản quyền và không được đưa lên repo.
