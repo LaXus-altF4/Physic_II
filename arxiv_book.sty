@@ -56,10 +56,17 @@
 \newcommand{\real}{\bb{R}}
 \newcommand{\comple}{\bb{complex}}
 
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath}
 \usepackage{mdframed}
 
+% Font: TeX Gyre Termes (chữ) + TeX Gyre Termes Math (công thức), hỗ trợ tiếng Việt.
+% unicode-math phải nạp sau amsmath; không dùng amssymb/amsfonts để tránh xung đột.
 \usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Termes}[SmallCapsFont={Latin Modern Roman Caps}]
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}[Scale=MatchLowercase]
+\setmathfont{TeX Gyre Termes Math}
 
 
 
@@ -78,18 +85,15 @@
 
 \usepackage{url}            % simple URL typesetting
 \usepackage{booktabs}       % professional-quality tables
-\usepackage{amsfonts}       % blackboard math symbols
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
-\usepackage{lipsum}
-\usepackage{graphicx}
 \usepackage{amsthm}
 \renewcommand{\bibname}{\large\bfseries References}
 
 
 
 \newenvironment{sol}{%
-  \begin{proof}[Solution]%
+  \begin{proof}[Solution]\renewcommand{\qedsymbol}{}%
 }{%
   \end{proof}%
 }
@@ -168,7 +172,7 @@
   \renewcommand{\headrulewidth}{0pt}
   \fancyheadoffset{0pt}
   \rhead{\scshape \today}
-  \lhead{\scshape Laxus . Ambitious}
+  \lhead{\scshape LaXus · Ambitious}
   \cfoot{\thepage}
 
 
