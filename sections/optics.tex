@@ -12,8 +12,8 @@ Tác dụng của các chùm sáng khác nhau thì độc lập với nhau: tác
 \item \textit{Descartes' Laws.}\\
 \begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}[>=Stealth]
-        \fill[darkblue!8] (-3,0) rectangle (3,-2.4);
+    \begin{tikzpicture}[every node/.append style={fill=white, inner sep=1pt}, >=Stealth]
+        \fill[pattern=north east lines] (-3,0) rectangle (3,-2.4);
         \draw[thick] (-3,0) -- (3,0);
         \draw[thin, dashed] (0,2.4) -- (0,-2.4);
         \node[right] at (0,2.4) {$N$};
@@ -98,8 +98,8 @@ Vậy ánh sáng phản xạ đi theo con đường có quang lộ cực tiểu.
 Xét $A$ trong môi trường chiết suất $n_1$ và $B$ trong môi trường chiết suất $n_2$; $I$ là một điểm trên mặt phân cách $\Sigma$. Gọi $A'$, $B'$ là hình chiếu của $A$, $B$ lên $\Sigma$, $AA' = h_1$, $BB' = h_2$, $A'B' = p$, $A'I = x$.
 \begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}[>=Stealth, scale=1.3]
-        \fill[darkblue!8] (-1.4,0) rectangle (4.6,-2.4);
+    \begin{tikzpicture}[every node/.append style={fill=white, inner sep=1pt}, >=Stealth, scale=1.3]
+        \fill[pattern=north east lines] (-1.4,0) rectangle (4.6,-2.4);
         \draw[thick] (-1.4,0) -- (4.6,0) node[right] {$\Sigma$};
         \coordinate (A) at (0,2);
         \coordinate (Ap) at (0,0);
@@ -120,7 +120,7 @@ Xét $A$ trong môi trường chiết suất $n_1$ và $B$ trong môi trường 
         \draw[<->, thin] (-0.8,0) -- (-0.8,2) node[midway, left] {$h_1$};
         \draw[<->, thin] (3.9,0) -- (3.9,-1.8) node[midway, right] {$h_2$};
         \draw[<->, thin] (0,-0.7) -- (2.4,-0.7) node[midway, below] {$x$};
-        \draw[thin] (2.4,-0.1) -- (2.4,-0.8);
+        \draw[thin, dotted] (2.4,-0.1) -- (2.4,-0.8);
         \draw[<->, thin] (2.4,0.4) -- (3.5,0.4) node[midway, above] {$p-x$};
         % góc từ pháp tuyến
         \draw[thin] (2.4,0.6) arc[start angle=90, end angle=140.2, radius=0.6];
@@ -156,8 +156,8 @@ chính là định luật khúc xạ Descartes.
             \foreach \th in {-24,-12,0,12,24}{
                 \draw[semithick, -{Stealth}] ($(P)+({180+\th}:3.3)$) -- ($(P)+({180+\th}:0.15)$);
             }
-            \draw[thick, darkblue] ($(P)+(152:2.6)$) arc[start angle=152, end angle=208, radius=2.6];
-            \draw[thick, darkblue] ($(P)+(152:1.5)$) arc[start angle=152, end angle=208, radius=1.5];
+            \draw[thick] ($(P)+(152:2.6)$) arc[start angle=152, end angle=208, radius=2.6];
+            \draw[thick] ($(P)+(152:1.5)$) arc[start angle=152, end angle=208, radius=1.5];
             \node[above] at ($(P)+(152:2.6)$) {$\Sigma_1$};
             \node[above] at ($(P)+(152:1.5)$) {$\Sigma_2$};
             \fill (P) circle (1.5pt);
@@ -168,8 +168,8 @@ chính là định luật khúc xạ Descartes.
             \foreach \yy in {-1,-0.5,0,0.5,1}{
                 \draw[semithick, -{Stealth}] (0,\yy) -- (3.4,\yy);
             }
-            \draw[thick, darkblue] (1.0,-1.4) -- (1.0,1.4) node[above] {$\Sigma_1$};
-            \draw[thick, darkblue] (2.4,-1.4) -- (2.4,1.4) node[above] {$\Sigma_2$};
+            \draw[thick] (1.0,-1.4) -- (1.0,1.4) node[above] {$\Sigma_1$};
+            \draw[thick] (2.4,-1.4) -- (2.4,1.4) node[above] {$\Sigma_2$};
             \node at (1.7,-2.1) {chùm song song};
         \end{scope}
     \end{tikzpicture}
@@ -181,7 +181,7 @@ Quang lộ của các tia sáng giữa hai mặt trực giao của một chùm s
 Xét hai tia song song $A_1I_1B_1$ và $A_2I_2B_2$ khúc xạ qua mặt phân cách, với $\Sigma_1$ và $\Sigma_2$ là hai mặt trực giao; $H_2$ là chân đường vuông góc từ $I_1$ xuống tia tới thứ hai, $H_1$ là chân đường vuông góc từ $I_2$ xuống tia khúc xạ thứ nhất.
 \begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}[>=Stealth, scale=1.4]
+    \begin{tikzpicture}[every node/.append style={fill=white, inner sep=1pt}, >=Stealth, scale=1.4]
         \coordinate (I1) at (0,0);
         \coordinate (I2) at (2.4,0);
         \coordinate (H2) at (0.992,1.182);
@@ -191,12 +191,12 @@ Xét hai tia song song $A_1I_1B_1$ và $A_2I_2B_2$ khúc xạ qua mặt phân c�
         \coordinate (B2) at (2.897,-0.838);
         \coordinate (H1) at (0.626,-1.054);
         % mặt phân cách và pháp tuyến tại I_2
-        \fill[darkblue!8] (-2.4,0) rectangle (3.8,-2.3);
+        \fill[pattern=north east lines] (-2.4,0) rectangle (3.8,-2.3);
         \draw[thick] (-2.4,0) -- (3.8,0);
         \draw[thin, dashed] (2.4,1.5) -- (2.4,-1.3);
         % hai mặt trực giao
-        \draw[thick, darkblue] ($(A1)!-0.3!(A2)$) -- ($(A1)!1.4!(A2)$) node[above] {$\Sigma_1$};
-        \draw[thick, darkblue] ($(B1)!-0.3!(B2)$) -- ($(B1)!1.4!(B2)$) node[below right] {$\Sigma_2$};
+        \draw[thick] ($(A1)!-0.3!(A2)$) -- ($(A1)!1.4!(A2)$) node[above] {$\Sigma_1$};
+        \draw[thick] ($(B1)!-0.3!(B2)$) -- ($(B1)!1.4!(B2)$) node[below right] {$\Sigma_2$};
         % hai tia
         \draw[semithick, -{Stealth}] (A1) -- (I1);
         \draw[semithick, -{Stealth}] (I1) -- (B1);
@@ -252,7 +252,7 @@ Theo định luật khúc xạ $n_1\sin i_1 = n_2\sin i_2$, mà $\sin i_1 = \dfr
 Góc khối nhìn diện tích $dS$ từ điểm $O$ là phần không gian giới hạn bởi hình nón đỉnh $O$ có các đường sinh tựa trên chu vi của $dS$ (đơn vị: steradian, sr).
 \begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}[>=Stealth, vec/.style={-{Stealth}, thick, darkblue}]
+    \begin{tikzpicture}[>=Stealth, vec/.style={-{Stealth}, thick}]
         \coordinate (O) at (0,0);
         \coordinate (P) at (4,0);
         % hình nón
@@ -261,8 +261,8 @@ Góc khối nhìn diện tích $dS$ từ điểm $O$ là phần không gian gi�
         \draw[semithick] (O) -- (4.689,-0.82);
         \draw[thin, dashed] (O) -- (P);
         % mặt cầu bán kính 1
-        \draw[thick, darkblue] (9.93:1.5) arc[start angle=9.93, end angle=-9.93, radius=1.5];
-        \draw[thin] (1.1,0.55) -- (1.49,0.1);
+        \draw[thick] (9.93:1.5) arc[start angle=9.93, end angle=-9.93, radius=1.5];
+        \draw[thin, dotted] (1.1,0.55) -- (1.49,0.1);
         \node[above] at (1.1,0.55) {$d\Omega$};
         % dS_0 và dS
         \draw[thick, dashed] (4,-0.7) -- (4,0.7);
@@ -277,9 +277,9 @@ Góc khối nhìn diện tích $dS$ từ điểm $O$ là phần không gian gi�
         % kích thước
         \draw[<->, thin] (0,-0.5) -- (1.5,-0.5) node[midway, below] {$1$};
         \draw[<->, thin] (0,-1.2) -- (4,-1.2) node[midway, below] {$r$};
-        \draw[thin] (0,-0.1) -- (0,-1.3);
-        \draw[thin] (1.5,-0.3) -- (1.5,-0.6);
-        \draw[thin] (4,-0.75) -- (4,-1.3);
+        \draw[thin, dotted] (0,-0.1) -- (0,-1.3);
+        \draw[thin, dotted] (1.5,-0.3) -- (1.5,-0.6);
+        \draw[thin, dotted] (4,-0.75) -- (4,-1.3);
     \end{tikzpicture}
 \end{figure}
 Gọi $dS_0 = dS\cos\alpha$ là hình chiếu của $dS$ lên mặt vuông góc với tia, ta có
@@ -349,15 +349,15 @@ x_2 &= a_2\cos\left(\omega t - \frac{2\pi L_2}{\lambda}\right) = a_2\cos(\omega 
         \fill (O2) circle (1.2pt) node[left=4pt] {$O_2$};
         \fill (M) circle (1.2pt) node[above left] {$M$};
         % các kích thước l, D, x
-        \draw[<->, thin] (-0.7,-0.5) -- (-0.7,0.5) node[midway, left] {$l$};
-        \draw[thin] (-0.8,0.5) -- (-0.1,0.5);
-        \draw[thin] (-0.8,-0.5) -- (-0.1,-0.5);
+        \draw[<->, thin] (-1.1,-0.5) -- (-1.1,0.5) node[midway, left] {$l$};
+        \draw[thin, dotted] (-1.2,0.5) -- (-0.75,0.5);
+        \draw[thin, dotted] (-1.2,-0.5) -- (-0.75,-0.5);
         \draw[<->, thin] (0,-2.7) -- (6,-2.7) node[midway, below] {$D$};
-        \draw[thin] (0,-2.4) -- (0,-2.8);
-        \draw[thin] (6,-2.4) -- (6,-2.8);
+        \draw[thin, dotted] (0,-2.4) -- (0,-2.8);
+        \draw[thin, dotted] (6,-2.4) -- (6,-2.8);
         \draw[<->, thin] (6.5,0) -- (6.5,1.5) node[midway, right] {$x$};
-        \draw[thin] (6,1.5) -- (6.6,1.5);
-        \draw[thin] (6,0) -- (6.6,0);
+        \draw[thin, dotted] (6,1.5) -- (6.6,1.5);
+        \draw[thin, dotted] (6,0) -- (6.6,0);
     \end{tikzpicture}
 \end{figure}
 Cường độ tổng hợp phụ thuộc vào hiệu pha $\Delta\varphi = \varphi_2 - \varphi_1 = \dfrac{2\pi}{\lambda}(L_1 - L_2)$:
@@ -391,7 +391,7 @@ Nếu $O_1$, $O_2$ phát ánh sáng trắng ($0{,}4\ \mu\text{m} < \lambda < 0{,
         % gương phẳng
         \draw[thick] (0.4,0) -- (5.4,0);
         \foreach \x in {0.7,1.0,...,5.2}{
-            \draw[thin] (\x,0) -- (\x-0.2,-0.22);
+            \draw[thin, dotted] (\x,0) -- (\x-0.2,-0.22);
         }
         \node[below] at (2.9,-0.35) {gương phẳng};
         % màn E
@@ -422,14 +422,14 @@ Khi ánh sáng phản xạ trên mặt phân cách với một môi trường c�
 Xét bản mỏng chiết suất $n$ có bề dày thay đổi. Từ một nguồn $O$, hai tia tách ra (một tia phản xạ ở mặt trên tại $M$, một tia khúc xạ vào bản tại $B$, phản xạ ở mặt dưới tại $C$ rồi ló ra tại $M$) và gặp nhau tại $M$: đây là hai sóng kết hợp.
 \begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}[>=Stealth]
+    \begin{tikzpicture}[every node/.append style={fill=white, inner sep=1pt}, >=Stealth]
         \coordinate (B) at (0,0);
         \coordinate (M) at (1.544,0);
         \coordinate (C) at (0.772,-1.3);
         \coordinate (O) at (-4.98,4.18);
         \coordinate (R) at ($(O)!(B)!(M)$);
         % bản mỏng chiết suất n (bề dày phóng đại)
-        \fill[darkblue!8] (-1.6,0) rectangle (3.4,-1.3);
+        \fill[pattern=north east lines] (-1.6,0) rectangle (3.4,-1.3);
         \draw[thick] (-1.6,0) -- (3.4,0);
         \draw[thick] (-1.6,-1.3) -- (3.4,-1.3);
         \node at (2.5,-0.65) {$n$};
@@ -484,11 +484,11 @@ Do đó $\Delta L = \dfrac{2nd}{\cos i_2} - 2d\tan i_2\sin i_1 - \dfrac{\lambda}
 Nêm không khí tạo bởi hai bản thủy tinh hợp với nhau góc nhỏ $\alpha$; ánh sáng chiếu vuông góc.
 \begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}[>=Stealth]
+    \begin{tikzpicture}[every node/.append style={fill=white, inner sep=1pt}, >=Stealth]
         % bản dưới nằm ngang, bản trên nghiêng góc alpha (phóng đại)
-        \fill[darkblue!12] (-0.2,0) rectangle (6,-0.5);
+        \fill[pattern=north east lines] (-0.2,0) rectangle (6,-0.5);
         \draw[thick] (-0.2,-0.5) -- (-0.2,0) -- (6,0) -- (6,-0.5);
-        \fill[darkblue!12] (0,0) -- (6,1.5) -- (6,2.0) -- (0,0.5) -- cycle;
+        \fill[pattern=north east lines] (0,0) -- (6,1.5) -- (6,2.0) -- (0,0.5) -- cycle;
         \draw[thick] (0,0.5) -- (0,0) -- (6,1.5) -- (6,2.0);
         \node[scale=0.8] at (5.0,-0.27) {thủy tinh};
         \node[scale=0.8] at (4.9,1.75) {thủy tinh};
@@ -538,22 +538,22 @@ Với nêm thủy tinh chiết suất $n > 1$ đặt trong không khí, tia (1) 
 Đặt một thấu kính phẳng--lồi (mặt cầu bán kính $R$) lên một bản thủy tinh phẳng; giữa chúng là lớp không khí có bề dày tăng dần từ điểm tiếp xúc. Các vân cùng độ dày là những vòng tròn đồng tâm.
 \begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}[>=Stealth, scale=0.9]
+    \begin{tikzpicture}[every node/.append style={fill=white, inner sep=1pt}, >=Stealth, scale=0.9]
         \coordinate (O) at (0,3);
         \coordinate (H) at (0,0.6);
         \coordinate (M) at (1.8,0.6);
         % bản thủy tinh phẳng
-        \fill[darkblue!15] (-3.4,0) rectangle (3.4,-0.5);
+        \fill[pattern=north east lines] (-3.4,0) rectangle (3.4,-0.5);
         \draw[thick] (-3.4,0) -- (3.4,0);
         \node[scale=0.85] at (-2.2,-0.27) {bản thủy tinh};
         % thấu kính phẳng--lồi
-        \path[fill=darkblue!8, draw=black, thick] (-2.4,1.2) arc[start angle=-143.13, end angle=-36.87, radius=3]
+        \path[pattern=north west lines, draw=black, thick] (-2.4,1.2) arc[start angle=-143.13, end angle=-36.87, radius=3]
             -- (2.4,1.8) -- (-2.4,1.8) -- cycle;
         \node[scale=0.85] at (-1.5,1.5) {thấu kính};
         % trục và tam giác OHM
         \draw[thin, dashed] (0,3) -- (0,0);
-        \draw[semithick, darkblue] (O) -- (M) node[pos=0.5, above right] {$R$};
-        \draw[semithick, darkblue] (H) -- (M) node[midway, above] {$\rho_k$};
+        \draw[semithick] (O) -- (M) node[pos=0.5, above right] {$R$};
+        \draw[semithick] (H) -- (M) node[midway, above] {$\rho_k$};
         \draw[thin] (0,0.8) -- (0.2,0.8) -- (0.2,0.6);
         \draw[thin, dashed] (1.8,0.6) -- (2.95,0.6);
         \draw[<->, thin] (2.8,0) -- (2.8,0.6);
@@ -610,15 +610,15 @@ Xét nguồn điểm $S$, mặt sóng cầu bán kính $R$ và điểm quan sát
         \coordinate (F) at (2.621,0);
         \coordinate (M) at (6.8,0);
         % mặt sóng cầu bán kính R
-        \draw[thick, darkblue] (-40:3.2) arc[start angle=-40, end angle=40, radius=3.2];
+        \draw[thick] (-40:3.2) arc[start angle=-40, end angle=40, radius=3.2];
         \draw[thin, dashed] (S) -- (M);
         \draw[thin, dashed] (S) -- (Bk) node[pos=0.5, above left] {$R$};
         \draw[semithick] (Bk) -- (M) node[pos=0.55, above right] {$b+k\lambda/2$};
         \draw[thin, dashed] (Bk) -- (F) node[midway, left] {$r_k$};
         % MB_0 = b
         \draw[<->, thin] (3.2,-0.55) -- (6.8,-0.55) node[midway, below] {$b$};
-        \draw[thin] (3.2,-0.1) -- (3.2,-0.65);
-        \draw[thin] (6.8,-0.1) -- (6.8,-0.65);
+        \draw[thin, dotted] (3.2,-0.1) -- (3.2,-0.65);
+        \draw[thin, dotted] (6.8,-0.1) -- (6.8,-0.65);
         \fill (S) circle (1.5pt) node[left] {$S$};
         \fill (B0) circle (1.5pt) node[above right] {$B_0$};
         \fill (Bk) circle (1.5pt) node[above right] {$B_k$};

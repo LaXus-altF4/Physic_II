@@ -367,9 +367,9 @@ Dòng điện cường độ $I$ chạy trong dây dẫn thẳng dài vô hạn.
 \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[scale=1.4, x={(-0.55cm,-0.42cm)}, y={(1cm,0cm)}, z={(0cm,1cm)},
-        vec/.style={-{Stealth}, thick, darkblue}]
+        vec/.style={-{Stealth}, thick}]
         % mặt phẳng chứa I dl và r
-        \fill[darkblue!8] (0,0,0) -- (0,2.2,0) -- (-2.2,3.1,0) -- (-2.2,0.9,0) -- cycle;
+        \draw[dotted] (0,0,0) -- (0,2.2,0) -- (-2.2,3.1,0) -- (-2.2,0.9,0) -- cycle;
         \draw[thin, dashed] (0,-0.7,0) -- (0,0,0);
         \draw[thin, dashed] (0,1.6,0) -- (0,2.4,0);
         % phần tử I dl tại A và vector r = AM
@@ -470,7 +470,7 @@ hay dưới dạng vector ($q_0$ là giá trị đại số của điện tích)
 \]
 \begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}[vec/.style={-{Stealth}, thick, darkblue}]
+    \begin{tikzpicture}[vec/.style={-{Stealth}, thick}]
         % q_0 > 0 : B_0 hướng ra khỏi trang
         \begin{scope}
             \draw (0,0) circle (0.2) node {\scriptsize $+$};
@@ -478,8 +478,8 @@ hay dưới dạng vector ($q_0$ là giá trị đại số của điện tích)
             \draw[-{Stealth}, semithick] (0.14,0.14) -- (2.2,1.5) node[midway, above left] {$\vec{r}$};
             \draw[thin] (0.8,0) arc[start angle=0, end angle=34, radius=0.8];
             \node at (1.05,0.2) {\small $\alpha$};
-            \draw[thick, darkblue] (2.2,1.5) circle (0.17);
-            \fill[darkblue] (2.2,1.5) circle (0.04);
+            \draw[thick] (2.2,1.5) circle (0.17);
+            \fill (2.2,1.5) circle (0.04);
             \node[right] at (2.45,1.5) {$\vec{B}_0$};
             \fill (2.2,1.5) ++(0,0) circle (0pt) node[above=0.22cm] {$M$};
             \node at (1.2,-1.0) {$q_0>0$};
@@ -491,9 +491,9 @@ hay dưới dạng vector ($q_0$ là giá trị đại số của điện tích)
             \draw[-{Stealth}, semithick] (0.14,0.14) -- (2.2,1.5) node[midway, above left] {$\vec{r}$};
             \draw[thin] (0.8,0) arc[start angle=0, end angle=34, radius=0.8];
             \node at (1.05,0.2) {\small $\alpha$};
-            \draw[thick, darkblue] (2.2,1.5) circle (0.17);
-            \draw[thick, darkblue] (2.2,1.5) ++(45:0.17) -- ++(225:0.34);
-            \draw[thick, darkblue] (2.2,1.5) ++(135:0.17) -- ++(315:0.34);
+            \draw[thick] (2.2,1.5) circle (0.17);
+            \draw[thick] (2.2,1.5) ++(45:0.17) -- ++(225:0.34);
+            \draw[thick] (2.2,1.5) ++(135:0.17) -- ++(315:0.34);
             \node[right] at (2.45,1.5) {$\vec{B}_0$};
             \node[above=0.22cm] at (2.2,1.5) {$M$};
             \node at (1.2,-1.0) {$q_0<0$};
@@ -535,10 +535,10 @@ Ta tính lưu số của $\vec{H}$ do dây dẫn thẳng dài vô hạn gây ra 
 \]
 \begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}[vec/.style={-{Stealth}, thick, darkblue}]
+    \begin{tikzpicture}[vec/.style={-{Stealth}, thick}]
         % (a) (C) bao quanh dây dẫn
         \begin{scope}
-            \draw[thick, darkblue, smooth cycle]
+            \draw[thick, smooth cycle]
                 plot coordinates {(1.6,0) (1.1,1.3) (-0.4,1.7) (-1.6,0.6) (-1.5,-0.9) (0,-1.6) (1.2,-1.1)};
             \draw[vec] (1.6,-0.2) -- (1.6,0.25) node[right] {$d\vec{l}$};
             \draw[thin, dashed] (0,0) -- (1.3,0);
@@ -556,7 +556,7 @@ Ta tính lưu số của $\vec{H}$ do dây dẫn thẳng dài vô hạn gây ra 
         \begin{scope}[xshift=5.6cm]
             \draw[thin, dashed] (0,0) -- (17.9:2.474);
             \draw[thin, dashed] (0,0) -- (-17.9:2.474);
-            \draw[thick, darkblue] (2.6,0) circle (0.8);
+            \draw[thick] (2.6,0) circle (0.8);
             \draw[vec] (3.4,-0.2) -- (3.4,0.25) node[right] {$d\vec{l}$};
             \draw[thin] (1.0,0) arc[start angle=0, end angle=17.9, radius=1.0];
             \draw[thin] (1.0,0) arc[start angle=0, end angle=-17.9, radius=1.0];
@@ -650,7 +650,7 @@ Hai cạnh nằm ngang $NP$ và $QM$ chịu hai lực trực đối:
 \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[scale=1.5, x={(-0.55cm,-0.42cm)}, y={(1cm,0cm)}, z={(0cm,1cm)},
-        vec/.style={-{Stealth}, thick, darkblue}]
+        vec/.style={-{Stealth}, thick}]
         \pgfmathsetmacro{\al}{35}
         \pgfmathsetmacro{\cx}{1.3*cos(\al)}
         \pgfmathsetmacro{\cy}{1.3*sin(\al)}
@@ -661,7 +661,6 @@ Hai cạnh nằm ngang $NP$ và $QM$ chịu hai lực trực đối:
         \coordinate (A) at (\cx,-\cy,0);
         \coordinate (B) at (-\cx,\cy,0);
         % khung MNPQ
-        \fill[darkblue!10] (M) -- (N) -- (P) -- (Q) -- cycle;
         % hệ trục
         \draw[-{Stealth}] (0,0,0) -- (2.6,0,0) node[left] {$x$};
         \draw[-{Stealth}] (0,0,0) -- (0,3.6,0) node[right] {$y$};
@@ -755,19 +754,19 @@ d^2A = d\vec{F}\cdot d\vec{x} = (I\,d\vec{l} \times \vec{B})\cdot d\vec{x}.
 \]
 \begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}[vec/.style={-{Stealth}, thick, darkblue}]
+    \begin{tikzpicture}[vec/.style={-{Stealth}, thick}]
         % mạch (C) và vị trí sau khi dịch chuyển dx
         \draw[semithick] (0,0) .. controls (1,0.6) and (3,0.6) .. (4,0);
         \draw[semithick, dashed] (0,1) .. controls (1,1.6) and (3,1.6) .. (4,1);
         \draw[-{Stealth}, semithick] (3.2,0.43) -- (3.6,0.3);
         % diện tích quét
-        \fill[darkblue!15] (1.55,0.43) rectangle (2.45,1.43);
+        \fill[pattern=north east lines] (1.55,0.43) rectangle (2.45,1.43);
         \draw[thin, dashed] (1.55,0.43) -- (1.55,1.43);
         \draw[thin, dashed] (2.45,0.43) -- (2.45,1.43);
         \draw[vec] (1.55,0.43) -- (2.45,0.43) node[midway, below] {$d\vec{l}$};
         \draw[vec] (1.55,0.43) -- (1.55,1.43) node[midway, left] {$d\vec{x}$};
-        \draw[thick, darkblue] (2.0,0.93) circle (0.15);
-        \fill[darkblue] (2.0,0.93) circle (0.035);
+        \filldraw[fill=white, thick] (2.0,0.93) circle (0.15);
+        \fill (2.0,0.93) circle (0.035);
         \node[right] at (2.7,0.93) {$d\vec{S} = d\vec{l} \times d\vec{x}$};
         \node[below] at (0.3,-0.1) {$(C)$};
         \node[below] at (3.6,0.2) {$I$};
@@ -791,16 +790,16 @@ Xét mạch kín $(C)$ mang dòng $I$; quy ước mọi mặt tựa trên $(C)$ 
 \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[x={(-0.5cm,-0.4cm)}, y={(1cm,0cm)}, z={(0cm,1cm)},
-        vec/.style={-{Stealth}, thick, darkblue}]
+        vec/.style={-{Stealth}, thick}]
         % mặt quét S: các đường sinh và hai đường bao
         \foreach \t in {0,60,...,300}{
-            \draw[thin, darkblue!45] ({1.2*cos(\t)},0,{1.2*sin(\t)}) -- ({1.2*cos(\t)},3.4,{1.2*sin(\t)});
+            \draw[thin, dotted] ({1.2*cos(\t)},0,{1.2*sin(\t)}) -- ({1.2*cos(\t)},3.4,{1.2*sin(\t)});
         }
-        \draw[semithick, darkblue] ({1.2*(-0.371)},0,{1.2*0.928}) -- ({1.2*(-0.371)},3.4,{1.2*0.928});
-        \draw[semithick, darkblue] ({-1.2*(-0.371)},0,{-1.2*0.928}) -- ({-1.2*(-0.371)},3.4,{-1.2*0.928});
+        \draw[semithick] ({1.2*(-0.371)},0,{1.2*0.928}) -- ({1.2*(-0.371)},3.4,{1.2*0.928});
+        \draw[semithick] ({-1.2*(-0.371)},0,{-1.2*0.928}) -- ({-1.2*(-0.371)},3.4,{-1.2*0.928});
         % vị trí 1 và vị trí 2
         \foreach \yy in {0,3.4}{
-            \draw[thick, darkblue, fill=darkblue!12, fill opacity=0.6] plot[domain=0:360, samples=72, variable=\t]
+            \draw[thick] plot[domain=0:360, samples=72, variable=\t]
                 ({1.2*cos(\t)},\yy,{1.2*sin(\t)}) -- cycle;
             \draw[-{Stealth}, thick] ({1.2*cos(200)},\yy,{1.2*sin(200)}) -- ({1.2*cos(212)},\yy,{1.2*sin(212)});
         }
@@ -812,7 +811,7 @@ Xét mạch kín $(C)$ mang dòng $I$; quy ước mọi mặt tựa trên $(C)$ 
         \node[above] at (0,1.7,1.35) {$S$};
         \node[above] at (0,0,1.5) {vị trí 1};
         \node[above] at (0,3.4,1.5) {vị trí 2};
-        \node[below left] at ({1.2*cos(235)},0,{1.2*sin(235)}) {$(C)$};
+        \node[below left=5pt] at ({1.2*cos(235)},0,{1.2*sin(235)}) {$(C)$};
     \end{tikzpicture}
 \end{figure}
 Lấy hai mặt $S_1$, $S_2$ tựa trên $(C)$ ở hai vị trí, có pháp tuyến $\vec{n}_1$, $\vec{n}_2$ định hướng theo chiều $I$; từ thông qua chúng là $\Phi_{m1}$, $\Phi_{m2}$. Ba mặt $S_1$, $S$, $S_2$ tạo thành một mặt kín, nên theo định lý Gauss tổng từ thông ra khỏi mặt kín này bằng 0. Khi lấy pháp tuyến hướng ra ngoài thì ở $S_1$ có $\vec{n}_1 \uparrow\uparrow d\vec{S}$, còn ở $S_2$ có $\vec{n}_2 \uparrow\downarrow d\vec{S}$, nên
@@ -867,16 +866,16 @@ Xét mạch kín $(C)$ chuyển động trong từ trường dừng. Trong thờ
 \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[x={(-0.5cm,-0.4cm)}, y={(1cm,0cm)}, z={(0cm,1cm)},
-        vec/.style={-{Stealth}, thick, darkblue}]
+        vec/.style={-{Stealth}, thick}]
         % mặt quét S_quét
         \foreach \t in {0,60,...,300}{
-            \draw[thin, darkblue!45] ({1.2*cos(\t)},0,{1.2*sin(\t)}) -- ({1.2*cos(\t)},2.4,{1.2*sin(\t)});
+            \draw[thin, dotted] ({1.2*cos(\t)},0,{1.2*sin(\t)}) -- ({1.2*cos(\t)},2.4,{1.2*sin(\t)});
         }
-        \draw[semithick, darkblue] ({1.2*(-0.371)},0,{1.2*0.928}) -- ({1.2*(-0.371)},2.4,{1.2*0.928});
-        \draw[semithick, darkblue] ({-1.2*(-0.371)},0,{-1.2*0.928}) -- ({-1.2*(-0.371)},2.4,{-1.2*0.928});
+        \draw[semithick] ({1.2*(-0.371)},0,{1.2*0.928}) -- ({1.2*(-0.371)},2.4,{1.2*0.928});
+        \draw[semithick] ({-1.2*(-0.371)},0,{-1.2*0.928}) -- ({-1.2*(-0.371)},2.4,{-1.2*0.928});
         % (C_1) và (C_2)
         \foreach \yy in {0,2.4}{
-            \draw[thick, darkblue, fill=darkblue!12, fill opacity=0.6] plot[domain=0:360, samples=72, variable=\t]
+            \draw[thick] plot[domain=0:360, samples=72, variable=\t]
                 ({1.2*cos(\t)},\yy,{1.2*sin(\t)}) -- cycle;
             \draw[-{Stealth}, thick] ({1.2*cos(200)},\yy,{1.2*sin(200)}) -- ({1.2*cos(212)},\yy,{1.2*sin(212)});
         }
