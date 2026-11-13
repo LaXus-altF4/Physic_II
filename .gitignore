@@ -3,15 +3,28 @@
 *.log
 *.out
 *.toc
+*.lof
+*.lot
+*.bbl
+*.blg
 *.xdv
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.synctex
+*.nav
+*.snm
+*.vrb
 
-# PDF xuất ra (đăng qua Releases)
+# PDF xuất ra (đăng ở mục Releases của GitHub)
 Physics_II.pdf
-David Griffiths Electrodynamics.pdf
-temporary_log.md
 
-# Thu muc cho file se xoa
+# Sách tham khảo có bản quyền, không đưa lên GitHub
+David Griffiths Electrodynamics.pdf
+
+# File chờ xóa
 _to_delete/
+
+# File rác của hệ điều hành / trình soạn thảo
+Thumbs.db
+.DS_Store
