@@ -1,4 +1,4 @@
-\chapter{Vector Operator}
+\chapter{Vector Calculus}
 \section{Nabla Operator}
 
 Ký hiệu Nabla, biểu diễn dưới dạng $\nabla$, là toán tử vi phân vector trong giải tích vector. 
@@ -83,20 +83,20 @@ Hay viết tường minh:
 Curl đo mức độ xoáy cục bộ của trường vector.
 
 \end{enumerate}
-\section{Intergral Caculus}
+\section{Integral Calculus}
 
 \begin{enumerate}
-    \item \textit{Line, Surface, and Volume Intergrals.}\\
+    \item \textit{Line, Surface, and Volume Integrals.}\\
     Trong giải tích nhiều biến và vật lý toán, khi hệ không còn gói gọn trên một trục số mà trải ra trong không gian, ta cần những công cụ tích phân vượt khỏi khuôn khổ “diện tích dưới đồ thị”.
 Line integral, surface integral và volume integral chính là ba lớp công cụ cốt lõi để đo lường, tổng hợp và diễn giải các đại lượng phân bố theo đường, mặt, khối trong không gian.
 \\
 \begin{enumerate}[label=(\roman*)]
-    \item \textbf{Line intergral}: đo độ dài tích lũy dọc theo quỹ đạo chuyển động.\\
-    \item \textbf{Surface intergral}: đo mật độ hoặc dòng chảy (Flux) xuyên qua mặt định hướng.\\
-    \item \textbf{Volume intergral}: đo mật độ hoặc số lượng nguồn nước bên trong khối.
+    \item \textbf{Line integral}: đo độ dài tích lũy dọc theo quỹ đạo chuyển động.\\
+    \item \textbf{Surface integral}: đo mật độ hoặc dòng chảy (Flux) xuyên qua mặt định hướng.\\
+    \item \textbf{Volume integral}: đo mật độ hoặc số lượng nguồn nước bên trong khối.
 \end{enumerate}
 
-    \item \textit{Line intergral.}\\
+    \item \textit{Line integral.}\\
     Nếu lấy tích phân theo một đường định hướng $\mathbf{P}$ bất kì từ vị trí đầu là $a$ và vị trí cuối là $b$ ta được công thức:
 \[
     \int_{a\mathbf{P}}^{b} \mathbf{v} \cdot d\mathbf{I}
@@ -107,8 +107,8 @@ Line integral, surface integral và volume integral chính là ba lớp công c�
 \]\\
 \textbf{example}: Một trong những ví dụng điển hình về tích phân trên trong vật lý đó là công thức tính công (\textbf{Work}) $\mathbf{W} = \mathbf{F} \cdot \ell$
 \\
-\item \textit{Surface intergral.}\\
-Tương tự như \textbf{Line intergral} thì \textbf{Surface intergarl} cũng có hai dạng công thức đối với mặt định hướng thông thường và mặt đóng (ballon).
+\item \textit{Surface integral.}\\
+Tương tự như \textbf{Line integral} thì \textbf{Surface integral} cũng có hai dạng công thức đối với mặt định hướng thông thường và mặt đóng (ballon).
 Trước hết ta cần định nghĩa vài công thức\\
 
 \begin{enumerate}
@@ -116,20 +116,20 @@ Trước hết ta cần định nghĩa vài công thức\\
   \item[(b)] ký hiệu $d \mathbf{a}$ trong sách ám chỉ mặt vi phân $\mathbf{a}$, là mặt định siêu nhỏ.
 \end{enumerate}
 
-Công thức \textbf{Surface itergral} đối với mặt định hướng thông thường.
+Công thức \textbf{Surface integral} đối với mặt định hướng thông thường.
 \[
 \int_{S} \mathbf{v} \cdot d\mathbf{a}
 \]
 \\
-Công thức \textbf{Surface intergral} đối với mặt kín.
+Công thức \textbf{Surface integral} đối với mặt kín.
 \[
 \oint_{S} \mathbf{v} \cdot d\mathbf{a}
 \]
 
-\item \textit{Volume intergral.}\\
-Khi một đại lượng không còn phân bố trên đường hay trên mặt, mà lan tỏa trong toàn bộ một miền không gian, ta cần đến \textbf{Volume intergarl} (tích phân trên khối) để mô tả tổng ảnh hưởng của nó.
+\item \textit{Volume integral.}\\
+Khi một đại lượng không còn phân bố trên đường hay trên mặt, mà lan tỏa trong toàn bộ một miền không gian, ta cần đến \textbf{Volume integral} (tích phân trên khối) để mô tả tổng ảnh hưởng của nó.
 \\ \\
-\textbf{Volume intergral} là công cụ trung tâm để tổng hợp các đại lượng cục bộ thành một đại lượng toàn cục trong không gian ba chiều.
+\textbf{Volume integral} là công cụ trung tâm để tổng hợp các đại lượng cục bộ thành một đại lượng toàn cục trong không gian ba chiều.
 \[
 \oint_{v} \mathbf{T} d\mathbf{\tau}
 \]
@@ -147,7 +147,7 @@ Khi một đại lượng không còn phân bố trên đường hay trên mặt
     Tọa độ cầu trong vật lý không chỉ là đổi hệ trục cho “đẹp”. Nó là cách tự nhiên nhất để mô tả những hệ có \textbf{đối xứng xuyên tâm}. Khi bài toán không phân biệt hướng ngang dọc mà chỉ quan tâm khoảng cách xa gần tính từ gốc.
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{Toa_Do_Cau.png}
+    \includegraphics[width=0.6\textwidth]{spherical_coordinates.png}
     \label{fig:p1}
 \end{figure}\\
    Cho Vector $\mathbf{v} =(x\hat{x}+y\hat{y}+z\hat{z})$ sẽ được biễu diễn trong tọa độ cầu như sau:
