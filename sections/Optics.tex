@@ -10,7 +10,34 @@ Trong một môi trường trong suốt, đồng tính và đẳng hướng, án
 Tác dụng của các chùm sáng khác nhau thì độc lập với nhau: tác dụng của một chùm sáng không phụ thuộc vào sự có mặt hay không của các chùm sáng khác.
 
 \item \textit{Descartes' Laws.}\\
-% TODO: hình — tia tới OI, pháp tuyến NN', tia phản xạ IR_1, tia khúc xạ IR_2
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \fill[darkblue!8] (-3,0) rectangle (3,-2.4);
+        \draw[thick] (-3,0) -- (3,0);
+        \draw[thin, dashed] (0,2.4) -- (0,-2.4);
+        \node[right] at (0,2.4) {$N$};
+        \node[right] at (0,-2.4) {$N'$};
+        % tia tới, phản xạ, khúc xạ
+        \draw[semithick, -{Stealth}] (140:2.2) -- (140:0.04);
+        \draw[semithick, -{Stealth}] (0,0) -- (40:2.2);
+        \draw[semithick, -{Stealth}] (0,0) -- (-59.3:2.2);
+        \node[above left] at (140:2.2) {$O$};
+        \node[above right] at (40:2.2) {$R_1$};
+        \node[below right] at (-59.3:2.2) {$R_2$};
+        \node[below left] at (0,0) {$I$};
+        % góc đo từ pháp tuyến
+        \draw[thin] (90:0.7) arc[start angle=90, end angle=140, radius=0.7];
+        \draw[thin] (90:0.7) arc[start angle=90, end angle=40, radius=0.7];
+        \draw[thin] (270:0.7) arc[start angle=270, end angle=300.7, radius=0.7];
+        \node at (118:1.0) {\small $i_1$};
+        \node at (62:1.05) {\small $i_1'$};
+        \node at (284:1.0) {\small $i_2$};
+        % các môi trường
+        \node[right] at (-3,1.0) {$n_1$};
+        \node[right] at (-3,-1.0) {$n_2 > n_1$};
+    \end{tikzpicture}
+\end{figure}
 \begin{theorem}[Định luật Descartes thứ nhất --- phản xạ]
 Tia phản xạ nằm trong mặt phẳng tới (mặt phẳng chứa tia tới và pháp tuyến $IN$) và góc phản xạ bằng góc tới: $i_1' = i_1$.
 \end{theorem}
@@ -69,7 +96,41 @@ Vậy ánh sáng phản xạ đi theo con đường có quang lộ cực tiểu.
 
 \item \textit{Fermat $\Rightarrow$ Law of Refraction.}\\
 Xét $A$ trong môi trường chiết suất $n_1$ và $B$ trong môi trường chiết suất $n_2$; $I$ là một điểm trên mặt phân cách $\Sigma$. Gọi $A'$, $B'$ là hình chiếu của $A$, $B$ lên $\Sigma$, $AA' = h_1$, $BB' = h_2$, $A'B' = p$, $A'I = x$.
-% TODO: hình — A, B hai bên mặt Sigma, h_1, h_2, x, p - x, góc i_1, i_2
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth, scale=1.3]
+        \fill[darkblue!8] (-1.4,0) rectangle (4.6,-2.4);
+        \draw[thick] (-1.4,0) -- (4.6,0) node[right] {$\Sigma$};
+        \coordinate (A) at (0,2);
+        \coordinate (Ap) at (0,0);
+        \coordinate (I) at (2.4,0);
+        \coordinate (B) at (3.5,-1.8);
+        \coordinate (Bp) at (3.5,0);
+        \draw[thin, dashed] (A) -- (Ap);
+        \draw[thin, dashed] (B) -- (Bp);
+        \draw[thin, dashed] (2.4,2.3) -- (2.4,-2.3);
+        \draw[semithick, -{Stealth}] (A) -- (I);
+        \draw[semithick, -{Stealth}] (I) -- (B);
+        \fill (A) circle (1.2pt) node[above] {$A$};
+        \fill (B) circle (1.2pt) node[below] {$B$};
+        \fill (Ap) circle (1.2pt) node[above left] {$A'$};
+        \fill (Bp) circle (1.2pt) node[above right] {$B'$};
+        \fill (I) circle (1.2pt) node[below left] {$I$};
+        % các khoảng cách
+        \draw[<->, thin] (-0.8,0) -- (-0.8,2) node[midway, left] {$h_1$};
+        \draw[<->, thin] (3.9,0) -- (3.9,-1.8) node[midway, right] {$h_2$};
+        \draw[<->, thin] (0,-0.7) -- (2.4,-0.7) node[midway, below] {$x$};
+        \draw[thin] (2.4,-0.1) -- (2.4,-0.8);
+        \draw[<->, thin] (2.4,0.4) -- (3.5,0.4) node[midway, above] {$p-x$};
+        % góc từ pháp tuyến
+        \draw[thin] (2.4,0.6) arc[start angle=90, end angle=140.2, radius=0.6];
+        \draw[thin] (2.4,-0.6) arc[start angle=270, end angle=301.4, radius=0.6];
+        \node at ($(I)+(115:0.95)$) {\small $i_1$};
+        \node at ($(I)+(287:0.9)$) {\small $i_2$};
+        \node at (3.4,1.4) {$n_1$};
+        \node at (0.8,-1.6) {$n_2$};
+    \end{tikzpicture}
+\end{figure}
 Quang lộ theo đường $AIB$ là
 \begin{equation}\label{eq:fermat-refr}
 L(x) = n_1\sqrt{h_1^2 + x^2} + n_2\sqrt{(p - x)^2 + h_2^2}.
@@ -86,13 +147,92 @@ chính là định luật khúc xạ Descartes.
 \begin{definition}
 \textbf{Mặt trực giao} của một chùm sáng là mặt vuông góc với mọi tia của chùm. Với chùm đồng quy, các mặt trực giao là các mặt cầu đồng tâm tại điểm đồng quy; với chùm song song, chúng là các mặt phẳng song song.
 \end{definition}
-% TODO: hình — chùm đồng quy (mặt cầu Sigma_1, Sigma_2) và chùm song song (mặt phẳng Sigma_1, Sigma_2)
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        % chùm đồng quy: các mặt trực giao là mặt cầu đồng tâm
+        \begin{scope}
+            \coordinate (P) at (3,0);
+            \foreach \th in {-24,-12,0,12,24}{
+                \draw[semithick, -{Stealth}] ($(P)+({180+\th}:3.3)$) -- ($(P)+({180+\th}:0.15)$);
+            }
+            \draw[thick, darkblue] ($(P)+(152:2.6)$) arc[start angle=152, end angle=208, radius=2.6];
+            \draw[thick, darkblue] ($(P)+(152:1.5)$) arc[start angle=152, end angle=208, radius=1.5];
+            \node[above] at ($(P)+(152:2.6)$) {$\Sigma_1$};
+            \node[above] at ($(P)+(152:1.5)$) {$\Sigma_2$};
+            \fill (P) circle (1.5pt);
+            \node at (1.6,-2.1) {chùm đồng quy};
+        \end{scope}
+        % chùm song song: các mặt trực giao là mặt phẳng song song
+        \begin{scope}[xshift=6.6cm]
+            \foreach \yy in {-1,-0.5,0,0.5,1}{
+                \draw[semithick, -{Stealth}] (0,\yy) -- (3.4,\yy);
+            }
+            \draw[thick, darkblue] (1.0,-1.4) -- (1.0,1.4) node[above] {$\Sigma_1$};
+            \draw[thick, darkblue] (2.4,-1.4) -- (2.4,1.4) node[above] {$\Sigma_2$};
+            \node at (1.7,-2.1) {chùm song song};
+        \end{scope}
+    \end{tikzpicture}
+\end{figure}
 \begin{theorem}[Malus]
 Quang lộ của các tia sáng giữa hai mặt trực giao của một chùm sáng thì bằng nhau.
 \end{theorem}
 \begin{proof}
 Xét hai tia song song $A_1I_1B_1$ và $A_2I_2B_2$ khúc xạ qua mặt phân cách, với $\Sigma_1$ và $\Sigma_2$ là hai mặt trực giao; $H_2$ là chân đường vuông góc từ $I_1$ xuống tia tới thứ hai, $H_1$ là chân đường vuông góc từ $I_2$ xuống tia khúc xạ thứ nhất.
-% TODO: hình — hai tia A_1 I_1 B_1, A_2 I_2 B_2; các điểm H_1, H_2
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth, scale=1.4]
+        \coordinate (I1) at (0,0);
+        \coordinate (I2) at (2.4,0);
+        \coordinate (H2) at (0.992,1.182);
+        \coordinate (A1) at (-1.685,1.414);
+        \coordinate (A2) at (-0.693,2.596);
+        \coordinate (B1) at (1.124,-1.892);
+        \coordinate (B2) at (2.897,-0.838);
+        \coordinate (H1) at (0.626,-1.054);
+        % mặt phân cách và pháp tuyến tại I_2
+        \fill[darkblue!8] (-2.4,0) rectangle (3.8,-2.3);
+        \draw[thick] (-2.4,0) -- (3.8,0);
+        \draw[thin, dashed] (2.4,1.5) -- (2.4,-1.3);
+        % hai mặt trực giao
+        \draw[thick, darkblue] ($(A1)!-0.3!(A2)$) -- ($(A1)!1.4!(A2)$) node[above] {$\Sigma_1$};
+        \draw[thick, darkblue] ($(B1)!-0.3!(B2)$) -- ($(B1)!1.4!(B2)$) node[below right] {$\Sigma_2$};
+        % hai tia
+        \draw[semithick, -{Stealth}] (A1) -- (I1);
+        \draw[semithick, -{Stealth}] (I1) -- (B1);
+        \draw[semithick, -{Stealth}] (A2) -- (I2);
+        \draw[semithick, -{Stealth}] (I2) -- (B2);
+        % các đường vuông góc
+        \draw[thin, dashed] (I1) -- (H2);
+        \draw[thin, dashed] (I2) -- (H1);
+        \coordinate (p) at ($(H2)!0.18!(I1)$);
+        \coordinate (q) at ($(H2)!0.18!(I2)$);
+        \draw[thin] (p) -- ($(p)+(q)-(H2)$) -- (q);
+        \coordinate (p) at ($(H1)!0.18!(I2)$);
+        \coordinate (q) at ($(H1)!0.18!(B1)$);
+        \draw[thin] (p) -- ($(p)+(q)-(H1)$) -- (q);
+        % điểm
+        \foreach \pt/\pos in {A1/above left, A2/above left, I1/below left, I2/above right,
+                              B1/below right, B2/below right, H1/below left, H2/above left}{
+            \fill (\pt) circle (1.2pt);
+        }
+        \node[above left] at (A1) {$A_1$};
+        \node[above left] at (A2) {$A_2$};
+        \node[below left] at (I1) {$I_1$};
+        \node[above right] at (I2) {$I_2$};
+        \node[below right] at (B1) {$B_1$};
+        \node[below right] at (B2) {$B_2$};
+        \node[below left] at (H1) {$H_1$};
+        \node[above right] at (H2) {$H_2$};
+        % góc và chiết suất
+        \draw[thin] (2.4,0.6) arc[start angle=90, end angle=140, radius=0.6];
+        \draw[thin] (2.4,-0.6) arc[start angle=270, end angle=300.7, radius=0.6];
+        \node at ($(I2)+(115:0.9)$) {\small $i_1$};
+        \node at ($(I2)+(283:0.85)$) {\small $i_2$};
+        \node at (-1.8,0.4) {$n_1$};
+        \node at (-1.8,-0.4) {$n_2$};
+    \end{tikzpicture}
+\end{figure}
 Ta có
 \[
 L_1 = n_1 A_1I_1 + n_2 I_1H_1 + n_2 H_1B_1,
@@ -110,7 +250,38 @@ Theo định luật khúc xạ $n_1\sin i_1 = n_2\sin i_2$, mà $\sin i_1 = \dfr
 
 \item \textit{Solid Angle.}\\
 Góc khối nhìn diện tích $dS$ từ điểm $O$ là phần không gian giới hạn bởi hình nón đỉnh $O$ có các đường sinh tựa trên chu vi của $dS$ (đơn vị: steradian, sr).
-% TODO: hình — đỉnh O, mặt cầu bán kính 1, dOmega, dS nghiêng góc alpha, dS_0, pháp tuyến n
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth, vec/.style={-{Stealth}, thick, darkblue}]
+        \coordinate (O) at (0,0);
+        \coordinate (P) at (4,0);
+        % hình nón
+        \draw[semithick] (O) -- (3.487,0.610);
+        \draw[thin, dashed] (3.487,0.610) -- (4,0.7);
+        \draw[semithick] (O) -- (4.689,-0.82);
+        \draw[thin, dashed] (O) -- (P);
+        % mặt cầu bán kính 1
+        \draw[thick, darkblue] (9.93:1.5) arc[start angle=9.93, end angle=-9.93, radius=1.5];
+        \draw[thin] (1.1,0.55) -- (1.49,0.1);
+        \node[above] at (1.1,0.55) {$d\Omega$};
+        % dS_0 và dS
+        \draw[thick, dashed] (4,-0.7) -- (4,0.7);
+        \node[above] at (4,0.7) {$dS_0$};
+        \draw[thick] (3.487,0.610) -- (4.689,-0.82);
+        \node[below right] at (4.689,-0.82) {$dS$};
+        % pháp tuyến n và góc alpha
+        \draw[vec] (P) -- ++(40:1.3) node[above right] {$\vec{n}$};
+        \draw[thin] ($(P)+(0.6,0)$) arc[start angle=0, end angle=40, radius=0.6];
+        \node at ($(P)+(18:0.88)$) {\small $\alpha$};
+        \fill (O) circle (1.5pt) node[left] {$O$};
+        % kích thước
+        \draw[<->, thin] (0,-0.5) -- (1.5,-0.5) node[midway, below] {$1$};
+        \draw[<->, thin] (0,-1.2) -- (4,-1.2) node[midway, below] {$r$};
+        \draw[thin] (0,-0.1) -- (0,-1.3);
+        \draw[thin] (1.5,-0.3) -- (1.5,-0.6);
+        \draw[thin] (4,-0.75) -- (4,-1.3);
+    \end{tikzpicture}
+\end{figure}
 Gọi $dS_0 = dS\cos\alpha$ là hình chiếu của $dS$ lên mặt vuông góc với tia, ta có
 \[
 \frac{d\Omega}{dS_0} = \frac{1}{r^2}
@@ -159,7 +330,36 @@ Xét hai nguồn kết hợp $O_1$, $O_2$ với $x(O_1) = a_1\cos\omega t$, $x(O
 x_1 &= a_1\cos\left(\omega t - \frac{2\pi L_1}{\lambda}\right) = a_1\cos(\omega t + \varphi_1),\\
 x_2 &= a_2\cos\left(\omega t - \frac{2\pi L_2}{\lambda}\right) = a_2\cos(\omega t + \varphi_2).
 \end{align*}
-% TODO: hình — hai khe O_1, O_2 cách nhau l, màn cách D, điểm M, r_1, r_2
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \coordinate (O1) at (0,0.5);
+        \coordinate (O2) at (0,-0.5);
+        \coordinate (M) at (6,1.5);
+        % màn chắn có hai khe và màn quan sát
+        \draw[thick] (0,2.3) -- (0,0.62);
+        \draw[thick] (0,0.38) -- (0,-0.38);
+        \draw[thick] (0,-0.62) -- (0,-2.3);
+        \draw[thick] (6,-2.3) -- (6,2.3) node[above] {$E$};
+        \draw[thin, dashed] (0,0) -- (6,0);
+        % hai tia
+        \draw[semithick, -{Stealth}] (O1) -- (M) node[pos=0.5, above=2pt] {$r_1$};
+        \draw[semithick, -{Stealth}] (O2) -- (M) node[pos=0.5, below=2pt] {$r_2$};
+        \fill (O1) circle (1.2pt) node[left=4pt] {$O_1$};
+        \fill (O2) circle (1.2pt) node[left=4pt] {$O_2$};
+        \fill (M) circle (1.2pt) node[above left] {$M$};
+        % các kích thước l, D, x
+        \draw[<->, thin] (-0.7,-0.5) -- (-0.7,0.5) node[midway, left] {$l$};
+        \draw[thin] (-0.8,0.5) -- (-0.1,0.5);
+        \draw[thin] (-0.8,-0.5) -- (-0.1,-0.5);
+        \draw[<->, thin] (0,-2.7) -- (6,-2.7) node[midway, below] {$D$};
+        \draw[thin] (0,-2.4) -- (0,-2.8);
+        \draw[thin] (6,-2.4) -- (6,-2.8);
+        \draw[<->, thin] (6.5,0) -- (6.5,1.5) node[midway, right] {$x$};
+        \draw[thin] (6,1.5) -- (6.6,1.5);
+        \draw[thin] (6,0) -- (6.6,0);
+    \end{tikzpicture}
+\end{figure}
 Cường độ tổng hợp phụ thuộc vào hiệu pha $\Delta\varphi = \varphi_2 - \varphi_1 = \dfrac{2\pi}{\lambda}(L_1 - L_2)$:
 \[
 I = I_1 + I_2 + 2\sqrt{I_1 I_2}\cos\Delta\varphi.
@@ -181,7 +381,34 @@ i = \frac{\lambda D}{l}.
 Nếu $O_1$, $O_2$ phát ánh sáng trắng ($0{,}4\ \mu\text{m} < \lambda < 0{,}76\ \mu\text{m}$) thì mỗi ánh sáng đơn sắc cho một hệ vân riêng. Vì khoảng vân $i = \lambda D/l$ phụ thuộc bước sóng, ở hai bên vân trắng trung tâm các hệ vân nằm lệch nhau: ứng với mỗi $k \neq 0$ các cực đại không trùng nhau và tạo thành một vân màu, bờ trong viền tím, bờ ngoài viền đỏ. Càng xa vân trung tâm, các vân ứng với những giá trị $k$ khác nhau chồng lên nhau, cho các vân màu nhạt dần và ranh giới không rõ nét.
 
 \item \textit{Lloyd's Mirror.}\\
-% TODO: hình — nguồn O, ảnh O', gương phẳng, tia trực tiếp r_2 = OM, tia phản xạ r_1 = OIM, màn E
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \coordinate (O) at (0,0.6);
+        \coordinate (Op) at (0,-0.6);
+        \coordinate (I) at (1.771,0);
+        \coordinate (M) at (6.2,1.5);
+        % gương phẳng
+        \draw[thick] (0.4,0) -- (5.4,0);
+        \foreach \x in {0.7,1.0,...,5.2}{
+            \draw[thin] (\x,0) -- (\x-0.2,-0.22);
+        }
+        \node[below] at (2.9,-0.35) {gương phẳng};
+        % màn E
+        \draw[thick] (6.2,-0.6) -- (6.2,2.2) node[above] {$E$};
+        % tia trực tiếp và tia phản xạ
+        \draw[semithick, -{Stealth}] (O) -- (M);
+        \draw[semithick, -{Stealth}] (O) -- (I);
+        \draw[semithick, -{Stealth}] (I) -- (M);
+        \draw[thin, dashed] (Op) -- (I);
+        \node[above] at (3.3,1.1) {$r_2$};
+        \node[below right] at (4.1,0.75) {$r_1$};
+        \fill (O) circle (1.2pt) node[left] {$O$};
+        \fill (Op) circle (1.2pt) node[left] {$O'$};
+        \fill (I) circle (1.2pt) node[above left=1pt] {$I$};
+        \fill (M) circle (1.2pt) node[above left] {$M$};
+    \end{tikzpicture}
+\end{figure}
 Đặt $r_2 = OM$ (tia trực tiếp) và $r_1 = OIM$ (tia phản xạ trên gương). Lý thuyết đơn giản dự đoán $M$ sáng khi $r_1 - r_2 = k\lambda$ và tối khi $r_1 - r_2 = (2k+1)\lambda/2$. Tuy nhiên thực nghiệm cho kết quả ngược lại: chỗ dự đoán sáng thì tối và ngược lại. Do đó hiệu pha thực sự là
 \[
 \Delta\varphi = \frac{2\pi(L_1 - L_2)}{\lambda} + \pi,
@@ -193,7 +420,47 @@ Khi ánh sáng phản xạ trên mặt phân cách với một môi trường c�
 
 \item \textit{Thin Films: Fringes of Equal Thickness.}\\
 Xét bản mỏng chiết suất $n$ có bề dày thay đổi. Từ một nguồn $O$, hai tia tách ra (một tia phản xạ ở mặt trên tại $M$, một tia khúc xạ vào bản tại $B$, phản xạ ở mặt dưới tại $C$ rồi ló ra tại $M$) và gặp nhau tại $M$: đây là hai sóng kết hợp.
-% TODO: hình — bản mỏng, nguồn O, tia OB -> C -> M và tia OM, BR vuông góc OM, i_1, i_2, d
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \coordinate (B) at (0,0);
+        \coordinate (M) at (1.544,0);
+        \coordinate (C) at (0.772,-1.3);
+        \coordinate (O) at (-4.98,4.18);
+        \coordinate (R) at ($(O)!(B)!(M)$);
+        % bản mỏng chiết suất n (bề dày phóng đại)
+        \fill[darkblue!8] (-1.6,0) rectangle (3.4,-1.3);
+        \draw[thick] (-1.6,0) -- (3.4,0);
+        \draw[thick] (-1.6,-1.3) -- (3.4,-1.3);
+        \node at (2.5,-0.65) {$n$};
+        \node at (-3.4,0.4) {không khí};
+        \node at (-3.4,-1.7) {không khí};
+        % pháp tuyến tại B
+        \draw[thin, dashed] (0,1.5) -- (0,-1.5);
+        % các tia
+        \draw[semithick, -{Stealth}] (O) -- (B);
+        \draw[semithick, -{Stealth}] (B) -- (C);
+        \draw[semithick, -{Stealth}] (C) -- (M);
+        \draw[semithick] (O) -- (M);
+        \draw[semithick, -{Stealth}] (M) -- ++(0.828*2.4,0.561*2.4);
+        % BR vuông góc OM
+        \draw[thin, dashed] (B) -- (R);
+        \coordinate (p) at ($(R)!0.14!(B)$);
+        \coordinate (q) at ($(R)!0.14!(M)$);
+        \draw[thin] (p) -- ($(p)+(q)-(R)$) -- (q);
+        % góc và bề dày d
+        \draw[thin] (0,0.8) arc[start angle=90, end angle=140, radius=0.8];
+        \draw[thin] (0,-0.75) arc[start angle=270, end angle=300.7, radius=0.75];
+        \node at (118:1.05) {\small $i_1$};
+        \node at (279:1.05) {\small $i_2$};
+        \draw[<->, thin] (-0.9,0) -- (-0.9,-1.3) node[midway, left] {$d$};
+        \fill (O) circle (1.2pt) node[above left] {$O$};
+        \fill (B) circle (1.2pt) node[below left] {$B$};
+        \fill (C) circle (1.2pt) node[below] {$C$};
+        \fill (M) circle (1.2pt) node[below right] {$M$};
+        \fill (R) circle (1.2pt) node[above right] {$R$};
+    \end{tikzpicture}
+\end{figure}
 Theo quy tắc Lloyd, hiệu quang lộ là
 \[
 \Delta L = L_1 - L_2 = OB + n(BC + CM) - \left(OM + \frac{\lambda}{2}\right).
@@ -215,7 +482,29 @@ Do đó $\Delta L = \dfrac{2nd}{\cos i_2} - 2d\tan i_2\sin i_1 - \dfrac{\lambda}
 
 \item \textit{Air Wedge.}\\
 Nêm không khí tạo bởi hai bản thủy tinh hợp với nhau góc nhỏ $\alpha$; ánh sáng chiếu vuông góc.
-% TODO: hình — nêm không khí giữa hai bản thủy tinh, tia (1) phản xạ ở mặt dưới bản trên, tia (2) phản xạ ở bản dưới
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        % bản dưới nằm ngang, bản trên nghiêng góc alpha (phóng đại)
+        \fill[darkblue!12] (-0.2,0) rectangle (6,-0.5);
+        \draw[thick] (-0.2,-0.5) -- (-0.2,0) -- (6,0) -- (6,-0.5);
+        \fill[darkblue!12] (0,0) -- (6,1.5) -- (6,2.0) -- (0,0.5) -- cycle;
+        \draw[thick] (0,0.5) -- (0,0) -- (6,1.5) -- (6,2.0);
+        \node[scale=0.8] at (5.0,-0.27) {thủy tinh};
+        \node[scale=0.8] at (4.9,1.75) {thủy tinh};
+        \node[scale=0.8] at (5.3,0.62) {không khí};
+        % ánh sáng chiếu vuông góc và hai tia phản xạ
+        \draw[semithick, -{Stealth}] (3,3.0) -- (3,0.02);
+        \draw[semithick, -{Stealth}] (3,0.75) -- (3.5,3.0);
+        \draw[semithick, -{Stealth}] (3,0) -- (2.5,3.0);
+        \node[above] at (3.5,3.0) {$(1)$};
+        \node[above] at (2.5,3.0) {$(2)$};
+        % góc alpha và bề dày d
+        \draw[thin] (1.8,0) arc[start angle=0, end angle=14.04, radius=1.8];
+        \node at (2.15,0.27) {\small $\alpha$};
+        \draw[<->, thin] (4.2,0) -- (4.2,1.05) node[midway, left=1pt] {$d$};
+    \end{tikzpicture}
+\end{figure}
 Tia (1) phản xạ ở mặt dưới bản trên (từ thủy tinh sang không khí, chiết suất nhỏ hơn) nên quang lộ không tăng; tia (2) phản xạ trên bản dưới (từ không khí sang thủy tinh) nên quang lộ tăng thêm $\lambda/2$. Do đó
 \[
 \Delta L = L_2 - L_1 = 2d + \frac{\lambda}{2}.
@@ -247,7 +536,33 @@ Với nêm thủy tinh chiết suất $n > 1$ đặt trong không khí, tia (1) 
 
 \item \textit{Newton's Rings.}\\
 Đặt một thấu kính phẳng--lồi (mặt cầu bán kính $R$) lên một bản thủy tinh phẳng; giữa chúng là lớp không khí có bề dày tăng dần từ điểm tiếp xúc. Các vân cùng độ dày là những vòng tròn đồng tâm.
-% TODO: hình — thấu kính tâm O bán kính R trên bản phẳng, điểm M, chân H, rho_k, d_k
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth, scale=0.9]
+        \coordinate (O) at (0,3);
+        \coordinate (H) at (0,0.6);
+        \coordinate (M) at (1.8,0.6);
+        % bản thủy tinh phẳng
+        \fill[darkblue!15] (-3.4,0) rectangle (3.4,-0.5);
+        \draw[thick] (-3.4,0) -- (3.4,0);
+        \node[scale=0.85] at (-2.2,-0.27) {bản thủy tinh};
+        % thấu kính phẳng--lồi
+        \path[fill=darkblue!8, draw=black, thick] (-2.4,1.2) arc[start angle=-143.13, end angle=-36.87, radius=3]
+            -- (2.4,1.8) -- (-2.4,1.8) -- cycle;
+        \node[scale=0.85] at (-1.5,1.5) {thấu kính};
+        % trục và tam giác OHM
+        \draw[thin, dashed] (0,3) -- (0,0);
+        \draw[semithick, darkblue] (O) -- (M) node[pos=0.5, above right] {$R$};
+        \draw[semithick, darkblue] (H) -- (M) node[midway, above] {$\rho_k$};
+        \draw[thin] (0,0.8) -- (0.2,0.8) -- (0.2,0.6);
+        \draw[thin, dashed] (1.8,0.6) -- (2.95,0.6);
+        \draw[<->, thin] (2.8,0) -- (2.8,0.6);
+        \node[right] at (2.85,0.3) {$d_k$};
+        \fill (O) circle (1.2pt) node[above] {$O$};
+        \fill (H) circle (1.2pt) node[left] {$H$};
+        \fill (M) circle (1.2pt) node[above right] {$M$};
+    \end{tikzpicture}
+\end{figure}
 Gọi $\rho_k$ là bán kính vân thứ $k$ và $d_k$ là bề dày lớp không khí tại đó. Trong tam giác $OHM$:
 \[
 R^2 = (R - d_k)^2 + \rho_k^2
@@ -286,7 +601,30 @@ Mặt $\Sigma$ được chọn tùy ý; với mỗi bài toán ta chọn $\Sigma
 
 \item \textit{Fresnel Zones.}\\
 Xét nguồn điểm $S$, mặt sóng cầu bán kính $R$ và điểm quan sát $M$ cách đỉnh mặt sóng $B_0$ một khoảng $b$. Chia mặt sóng thành các \textbf{đới cầu Fresnel} sao cho khoảng cách từ mép hai đới liên tiếp đến $M$ hơn kém nhau $\lambda/2$.
-% TODO: hình — nguồn S, mặt sóng bán kính R, B_0, B_k, M, MB_0 = b, r_k
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth]
+        \coordinate (S) at (0,0);
+        \coordinate (B0) at (3.2,0);
+        \coordinate (Bk) at (2.621,1.835);
+        \coordinate (F) at (2.621,0);
+        \coordinate (M) at (6.8,0);
+        % mặt sóng cầu bán kính R
+        \draw[thick, darkblue] (-40:3.2) arc[start angle=-40, end angle=40, radius=3.2];
+        \draw[thin, dashed] (S) -- (M);
+        \draw[thin, dashed] (S) -- (Bk) node[pos=0.5, above left] {$R$};
+        \draw[semithick] (Bk) -- (M) node[pos=0.55, above right] {$b+k\lambda/2$};
+        \draw[thin, dashed] (Bk) -- (F) node[midway, left] {$r_k$};
+        % MB_0 = b
+        \draw[<->, thin] (3.2,-0.55) -- (6.8,-0.55) node[midway, below] {$b$};
+        \draw[thin] (3.2,-0.1) -- (3.2,-0.65);
+        \draw[thin] (6.8,-0.1) -- (6.8,-0.65);
+        \fill (S) circle (1.5pt) node[left] {$S$};
+        \fill (B0) circle (1.5pt) node[above right] {$B_0$};
+        \fill (Bk) circle (1.5pt) node[above right] {$B_k$};
+        \fill (M) circle (1.5pt) node[right] {$M$};
+    \end{tikzpicture}
+\end{figure}
 \begin{enumerate}
   \item[(a)] Diện tích mỗi đới (gần như bằng nhau): $\Delta S = \dfrac{\pi R b}{R + b}\,\lambda$.
   \item[(b)] Bán kính đới thứ $k$: $r_k = \sqrt{\dfrac{Rb\lambda}{R + b}}\,\sqrt{k}$, $k = 1, 2, \dots$
