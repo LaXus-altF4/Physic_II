@@ -1,0 +1,339 @@
+\chapter{Optics}
+% Soạn từ vở viết tay "Phần II: Quang Học"
+
+\section{Fundamental Laws of Geometrical Optics}
+\begin{enumerate}
+\item \textit{Rectilinear Propagation.}\\
+Trong một môi trường trong suốt, đồng tính và đẳng hướng, ánh sáng truyền theo đường thẳng.
+
+\item \textit{Independence of Light Beams.}\\
+Tác dụng của các chùm sáng khác nhau thì độc lập với nhau: tác dụng của một chùm sáng không phụ thuộc vào sự có mặt hay không của các chùm sáng khác.
+
+\item \textit{Descartes' Laws.}\\
+% TODO: hình — tia tới OI, pháp tuyến NN', tia phản xạ IR_1, tia khúc xạ IR_2
+\begin{theorem}[Định luật Descartes thứ nhất --- phản xạ]
+Tia phản xạ nằm trong mặt phẳng tới (mặt phẳng chứa tia tới và pháp tuyến $IN$) và góc phản xạ bằng góc tới: $i_1' = i_1$.
+\end{theorem}
+\begin{theorem}[Định luật Descartes thứ hai --- khúc xạ]
+Tia khúc xạ nằm trong mặt phẳng tới và tỉ số giữa sin góc tới và sin góc khúc xạ là một hằng số:
+\[
+\frac{\sin i_1}{\sin i_2} = n_{21}.
+\]
+\end{theorem}
+$n_{21}$ phụ thuộc vào bản chất của hai môi trường và được gọi là \textbf{chiết suất tỉ đối} của môi trường 2 đối với môi trường 1. Ví dụ: nước--không khí $n_{21} = 1{,}33 \approx \tfrac43$; thủy tinh--không khí $n_{21} = 1{,}52$.
+
+\item \textit{Absolute Refractive Index.}\\
+\begin{definition}
+Chiết suất tuyệt đối của một môi trường là chiết suất tỉ đối của môi trường đó đối với chân không:
+\[
+n = \frac{c}{v},
+\]
+với $v$ là vận tốc ánh sáng trong môi trường và $c$ là vận tốc ánh sáng trong chân không.
+\end{definition}
+Với không khí $v \approx c$ nên $n \approx 1$. So sánh với lý thuyết sóng điện từ ta có $n = \sqrt{\ep\mu}$, trong đó $\ep$ và $\mu$ lần lượt là hằng số điện môi và độ từ thẩm của môi trường. Liên hệ giữa chiết suất tỉ đối và tuyệt đối:
+\[
+n_{21} = \frac{v_1}{v_2} = \frac{c/v_2}{c/v_1} = \frac{n_2}{n_1}.
+\]
+Nếu môi trường 1 là không khí thì $n_1 \approx 1$ và $n_{21} \approx n_2$, nên có thể coi chiết suất tuyệt đối của một môi trường là chiết suất tỉ đối của nó đối với không khí. Định luật khúc xạ có dạng đối xứng
+\[
+\boxed{n_1\sin i_1 = n_2\sin i_2}.
+\]
+\end{enumerate}
+
+\section{Fermat's Principle and Malus's Theorem}
+\begin{enumerate}
+\item \textit{Optical Path Length.}\\
+Xét hai điểm $A$, $B$ cách nhau $d$ trong môi trường đồng tính chiết suất $n$. Thời gian ánh sáng đi từ $A$ đến $B$ là $t = d/v$. \textbf{Quang lộ} giữa $A$ và $B$ là quãng đường ánh sáng đi được trong chân không trong cùng khoảng thời gian đó:
+\[
+L = c\,t = c\,\frac{d}{v} = n\,d.
+\]
+Nếu ánh sáng đi qua nhiều môi trường thì $L = \sum_i n_i d_i$; nếu chiết suất thay đổi liên tục thì
+\[
+L = \int_A^B n\,ds.
+\]
+
+\item \textit{Fermat's Principle.}\\
+\begin{theorem}[Fermat]
+Giữa hai điểm $A$ và $B$, ánh sáng truyền theo con đường mà quang lộ là cực trị (cực tiểu, cực đại hoặc dừng).
+\end{theorem}
+Nói cách khác, ánh sáng truyền theo con đường mất ít thời gian nhất, hoặc nhiều thời gian nhất, hoặc theo những con đường có thời gian truyền bằng nhau.
+
+\item \textit{Fermat $\Rightarrow$ Law of Reflection.}\\
+Xét $A$, $B$ nằm phía trên mặt phản xạ $\Sigma$ và $AIB$ là đường đi của ánh sáng thỏa mãn $i_1 = i_1'$. Gọi $I'$ là một điểm bất kỳ trên $\Sigma$ và $B'$ là điểm đối xứng của $B$ qua $\Sigma$, khi đó $IB = IB'$. Vì $i_1 = i_1'$ nên $A$, $I$, $B'$ thẳng hàng, suy ra
+\[
+AI + IB = AB' < AI' + I'B' = AI' + I'B
+\quad\Leftrightarrow\quad
+L_{AIB} < L_{AI'B}.
+\]
+Vậy ánh sáng phản xạ đi theo con đường có quang lộ cực tiểu.
+
+\item \textit{Fermat $\Rightarrow$ Law of Refraction.}\\
+Xét $A$ trong môi trường chiết suất $n_1$ và $B$ trong môi trường chiết suất $n_2$; $I$ là một điểm trên mặt phân cách $\Sigma$. Gọi $A'$, $B'$ là hình chiếu của $A$, $B$ lên $\Sigma$, $AA' = h_1$, $BB' = h_2$, $A'B' = p$, $A'I = x$.
+% TODO: hình — A, B hai bên mặt Sigma, h_1, h_2, x, p - x, góc i_1, i_2
+Quang lộ theo đường $AIB$ là
+\begin{equation}\label{eq:fermat-refr}
+L(x) = n_1\sqrt{h_1^2 + x^2} + n_2\sqrt{(p - x)^2 + h_2^2}.
+\end{equation}
+Theo nguyên lý Fermat, $x$ phải thỏa mãn $\dfrac{dL}{dx} = 0$:
+\[
+\frac{dL}{dx} = n_1\frac{x}{\sqrt{h_1^2 + x^2}} - n_2\frac{p - x}{\sqrt{(p - x)^2 + h_2^2}} = 0
+\quad\Rightarrow\quad
+n_1\sin i_1 = n_2\sin i_2,
+\]
+chính là định luật khúc xạ Descartes.
+
+\item \textit{Malus's Theorem.}\\
+\begin{definition}
+\textbf{Mặt trực giao} của một chùm sáng là mặt vuông góc với mọi tia của chùm. Với chùm đồng quy, các mặt trực giao là các mặt cầu đồng tâm tại điểm đồng quy; với chùm song song, chúng là các mặt phẳng song song.
+\end{definition}
+% TODO: hình — chùm đồng quy (mặt cầu Sigma_1, Sigma_2) và chùm song song (mặt phẳng Sigma_1, Sigma_2)
+\begin{theorem}[Malus]
+Quang lộ của các tia sáng giữa hai mặt trực giao của một chùm sáng thì bằng nhau.
+\end{theorem}
+\begin{proof}
+Xét hai tia song song $A_1I_1B_1$ và $A_2I_2B_2$ khúc xạ qua mặt phân cách, với $\Sigma_1$ và $\Sigma_2$ là hai mặt trực giao; $H_2$ là chân đường vuông góc từ $I_1$ xuống tia tới thứ hai, $H_1$ là chân đường vuông góc từ $I_2$ xuống tia khúc xạ thứ nhất.
+% TODO: hình — hai tia A_1 I_1 B_1, A_2 I_2 B_2; các điểm H_1, H_2
+Ta có
+\[
+L_1 = n_1 A_1I_1 + n_2 I_1H_1 + n_2 H_1B_1,
+\qquad
+L_2 = n_1 A_2H_2 + n_1 H_2I_2 + n_2 I_2B_2.
+\]
+Theo định luật khúc xạ $n_1\sin i_1 = n_2\sin i_2$, mà $\sin i_1 = \dfrac{H_2I_2}{I_1I_2}$ và $\sin i_2 = \dfrac{H_1I_1}{I_1I_2}$, nên $n_1 H_2I_2 = n_2 I_1H_1$. Ngoài ra $A_1I_1H_2A_2$ và $H_1B_1B_2I_2$ là hình chữ nhật nên $A_1I_1 = A_2H_2$ và $H_1B_1 = I_2B_2$. Do đó $L_1 = L_2$.
+\end{proof}
+\end{enumerate}
+
+\section{Photometry}
+\begin{enumerate}
+\item \textit{Luminous Flux.}\\
+Để đặc trưng cho phần năng lượng gây ra cảm giác sáng, người ta đưa ra khái niệm \textbf{quang thông}: quang thông do một chùm sáng gửi tới diện tích $dS$ có trị số bằng phần năng lượng gây ra cảm giác sáng gửi tới $dS$ trong một đơn vị thời gian.
+
+\item \textit{Solid Angle.}\\
+Góc khối nhìn diện tích $dS$ từ điểm $O$ là phần không gian giới hạn bởi hình nón đỉnh $O$ có các đường sinh tựa trên chu vi của $dS$ (đơn vị: steradian, sr).
+% TODO: hình — đỉnh O, mặt cầu bán kính 1, dOmega, dS nghiêng góc alpha, dS_0, pháp tuyến n
+Gọi $dS_0 = dS\cos\alpha$ là hình chiếu của $dS$ lên mặt vuông góc với tia, ta có
+\[
+\frac{d\Omega}{dS_0} = \frac{1}{r^2}
+\quad\Rightarrow\quad
+d\Omega = \frac{dS\cos\alpha}{r^2}.
+\]
+
+\item \textit{Luminous Intensity.}\\
+\textbf{Độ sáng} (cường độ sáng) đặc trưng cho khả năng phát sáng của nguồn theo một phương. Gọi $d\Phi$ là quang thông gửi đi trong góc khối $d\Omega$:
+\[
+I = \frac{d\Phi}{d\Omega}.
+\]
+Nếu nguồn đẳng hướng thì $\Phi = \int I\,d\Omega = 4\pi I$. Đơn vị: $1\ \text{lumen} = 1\ \text{candela} \cdot 1\ \text{steradian}$.
+
+\item \textit{Illuminance.}\\
+\textbf{Độ rọi} của diện tích $dS$ là quang thông gửi tới một đơn vị diện tích:
+\[
+E = \frac{d\Phi}{dS}.
+\]
+Với nguồn điểm có độ sáng $I$: $d\Phi = I\,d\Omega = \dfrac{I\,dS\cos\alpha}{r^2}$, do đó
+\[
+E = \frac{I\cos\alpha}{r^2} \qquad (\text{lumen/m}^2).
+\]
+\end{enumerate}
+
+\section{Interference}
+\begin{enumerate}
+\item \textit{The Light Wave Function.}\\
+Nếu dao động sáng tại $O$ là $x_0 = a\cos\omega t$ thì tại $M$, với $\tau = L/c$ là thời gian ánh sáng truyền từ $O$ đến $M$,
+\[
+x = a\cos\big(\omega(t - \tau)\big) = a\cos\left(\omega t - \frac{2\pi L}{cT}\right) = a\cos\left(\omega t - \frac{2\pi L}{\lambda}\right),
+\]
+trong đó $L = c\tau$ là quang lộ trên đoạn $OM$ và $\lambda = cT$ là bước sóng trong chân không. Lượng $\varphi = -\dfrac{2\pi L}{\lambda}$ là pha ban đầu của dao động sáng tại $M$.
+
+\item \textit{Light Intensity.}\\
+Cường độ sáng tại một điểm có trị số bằng năng lượng truyền qua một đơn vị diện tích đặt vuông góc với phương truyền trong một đơn vị thời gian. Tương tự sóng âm, cường độ sáng tỉ lệ với bình phương biên độ: $I = k a^2$; trong các bài toán giao thoa, nhiễu xạ ta lấy $k = 1$, tức $I = a^2$.
+
+\item \textit{Superposition and Huygens' Principle.}\\
+\textbf{Nguyên lý chồng chất:} khi hai hay nhiều sóng ánh sáng gặp nhau, từng sóng không bị các sóng khác làm nhiễu loạn; sau khi gặp nhau chúng vẫn truyền đi như cũ, còn tại các điểm gặp nhau dao động sáng bằng tổng các dao động thành phần.
+
+\textbf{Nguyên lý Huygens:} mọi điểm nhận được sóng ánh sáng truyền đến đều trở thành nguồn sáng thứ cấp phát sóng về phía trước nó.
+
+\item \textit{Maxima and Minima.}\\
+Xét hai nguồn kết hợp $O_1$, $O_2$ với $x(O_1) = a_1\cos\omega t$, $x(O_2) = a_2\cos\omega t$. Tại $M$:
+\begin{align*}
+x_1 &= a_1\cos\left(\omega t - \frac{2\pi L_1}{\lambda}\right) = a_1\cos(\omega t + \varphi_1),\\
+x_2 &= a_2\cos\left(\omega t - \frac{2\pi L_2}{\lambda}\right) = a_2\cos(\omega t + \varphi_2).
+\end{align*}
+% TODO: hình — hai khe O_1, O_2 cách nhau l, màn cách D, điểm M, r_1, r_2
+Cường độ tổng hợp phụ thuộc vào hiệu pha $\Delta\varphi = \varphi_2 - \varphi_1 = \dfrac{2\pi}{\lambda}(L_1 - L_2)$:
+\[
+I = I_1 + I_2 + 2\sqrt{I_1 I_2}\cos\Delta\varphi.
+\]
+\begin{enumerate}
+  \item[(a)] \textbf{Cực đại} ($I_{\max} = I_1 + I_2 + 2\sqrt{I_1I_2}$): $\Delta\varphi = 2k\pi \Leftrightarrow L_1 - L_2 = k\lambda$.
+  \item[(b)] \textbf{Cực tiểu} ($I_{\min} = I_1 + I_2 - 2\sqrt{I_1I_2}$): $\Delta\varphi = (2k+1)\pi \Leftrightarrow L_1 - L_2 = (2k+1)\dfrac{\lambda}{2}$,
+\end{enumerate}
+với $k = 0, \pm1, \pm2, \dots$ Trong thí nghiệm Young (khoảng cách hai khe $l$, khoảng cách từ khe đến màn $D$), vị trí vân và khoảng vân là
+\[
+x_k^{s} = k\,\frac{\lambda D}{l},
+\qquad
+x_k^{t} = \left(k + \frac12\right)\frac{\lambda D}{l},
+\qquad
+i = \frac{\lambda D}{l}.
+\]
+
+\item \textit{White-Light Interference.}\\
+Nếu $O_1$, $O_2$ phát ánh sáng trắng ($0{,}4\ \mu\text{m} < \lambda < 0{,}76\ \mu\text{m}$) thì mỗi ánh sáng đơn sắc cho một hệ vân riêng. Vì khoảng vân $i = \lambda D/l$ phụ thuộc bước sóng, ở hai bên vân trắng trung tâm các hệ vân nằm lệch nhau: ứng với mỗi $k \neq 0$ các cực đại không trùng nhau và tạo thành một vân màu, bờ trong viền tím, bờ ngoài viền đỏ. Càng xa vân trung tâm, các vân ứng với những giá trị $k$ khác nhau chồng lên nhau, cho các vân màu nhạt dần và ranh giới không rõ nét.
+
+\item \textit{Lloyd's Mirror.}\\
+% TODO: hình — nguồn O, ảnh O', gương phẳng, tia trực tiếp r_2 = OM, tia phản xạ r_1 = OIM, màn E
+Đặt $r_2 = OM$ (tia trực tiếp) và $r_1 = OIM$ (tia phản xạ trên gương). Lý thuyết đơn giản dự đoán $M$ sáng khi $r_1 - r_2 = k\lambda$ và tối khi $r_1 - r_2 = (2k+1)\lambda/2$. Tuy nhiên thực nghiệm cho kết quả ngược lại: chỗ dự đoán sáng thì tối và ngược lại. Do đó hiệu pha thực sự là
+\[
+\Delta\varphi = \frac{2\pi(L_1 - L_2)}{\lambda} + \pi,
+\]
+tức pha của tia phản xạ $OIM$ đã thay đổi thêm $\pi$.
+\begin{theorem}[Quy tắc Lloyd]
+Khi ánh sáng phản xạ trên mặt phân cách với một môi trường có chiết suất lớn hơn môi trường ánh sáng tới, quang lộ của tia phản xạ dài thêm $\dfrac{\lambda}{2}$. Khi phản xạ trên môi trường có chiết suất nhỏ hơn thì quang lộ không thay đổi.
+\end{theorem}
+
+\item \textit{Thin Films: Fringes of Equal Thickness.}\\
+Xét bản mỏng chiết suất $n$ có bề dày thay đổi. Từ một nguồn $O$, hai tia tách ra (một tia phản xạ ở mặt trên tại $M$, một tia khúc xạ vào bản tại $B$, phản xạ ở mặt dưới tại $C$ rồi ló ra tại $M$) và gặp nhau tại $M$: đây là hai sóng kết hợp.
+% TODO: hình — bản mỏng, nguồn O, tia OB -> C -> M và tia OM, BR vuông góc OM, i_1, i_2, d
+Theo quy tắc Lloyd, hiệu quang lộ là
+\[
+\Delta L = L_1 - L_2 = OB + n(BC + CM) - \left(OM + \frac{\lambda}{2}\right).
+\]
+Kẻ $BR \perp OM$, ta có $OM - OB \approx RM$, nên $\Delta L \approx n(BC + CM) - RM - \dfrac{\lambda}{2}$. Gọi $d$ là bề dày bản tại $M$, $i_1$ là góc tới và $i_2$ là góc khúc xạ:
+\[
+RM = BM\sin i_1 = 2d\tan i_2\sin i_1,
+\qquad
+BC = CM = \frac{d}{\cos i_2}.
+\]
+Do đó $\Delta L = \dfrac{2nd}{\cos i_2} - 2d\tan i_2\sin i_1 - \dfrac{\lambda}{2}$, và dùng $\sin i_1 = n\sin i_2$ ta được
+\[
+\boxed{\Delta L = 2d\sqrt{n^2 - \sin^2 i_1} - \frac{\lambda}{2}}.
+\]
+Điểm sáng ứng với $\Delta L = k\lambda$, điểm tối ứng với $\Delta L = (2k+1)\lambda/2$. Mỗi vân ứng với một giá trị xác định của bề dày $d$, nên chúng được gọi là \textbf{vân cùng độ dày}. Nếu bản đặt trong môi trường chiết suất $n_0$ thì
+\[
+\Delta L = 2d\sqrt{n^2 - n_0^2\sin^2 i} \pm \frac{\lambda}{2}.
+\]
+
+\item \textit{Air Wedge.}\\
+Nêm không khí tạo bởi hai bản thủy tinh hợp với nhau góc nhỏ $\alpha$; ánh sáng chiếu vuông góc.
+% TODO: hình — nêm không khí giữa hai bản thủy tinh, tia (1) phản xạ ở mặt dưới bản trên, tia (2) phản xạ ở bản dưới
+Tia (1) phản xạ ở mặt dưới bản trên (từ thủy tinh sang không khí, chiết suất nhỏ hơn) nên quang lộ không tăng; tia (2) phản xạ trên bản dưới (từ không khí sang thủy tinh) nên quang lộ tăng thêm $\lambda/2$. Do đó
+\[
+\Delta L = L_2 - L_1 = 2d + \frac{\lambda}{2}.
+\]
+\begin{enumerate}
+  \item[(a)] Vân tối: $2d + \dfrac{\lambda}{2} = (2k+1)\dfrac{\lambda}{2} \Rightarrow d = k\,\dfrac{\lambda}{2}$, $k = 0, 1, 2, \dots$ Tại cạnh nêm ($d = 0$) là một vân tối.
+  \item[(b)] Vân sáng: $2d + \dfrac{\lambda}{2} = k\lambda \Rightarrow d = \left(k - \dfrac12\right)\dfrac{\lambda}{2}$, $k = 1, 2, \dots$
+\end{enumerate}
+Các vân là những đường thẳng song song với cạnh nêm, vân sáng và vân tối xen kẽ. Khoảng cách giữa hai vân cùng loại liên tiếp:
+\[
+\sin\alpha = \frac{d_{k+1} - d_k}{\Delta x} = \frac{\lambda}{2\,\Delta x}
+\quad\Rightarrow\quad
+\boxed{\Delta x = \frac{\lambda}{2\sin\alpha}}.
+\]
+Bề rộng của mỗi vân (sáng hoặc tối) bằng $\Delta x/2$.
+
+\item \textit{Glass Wedge.}\\
+Với nêm thủy tinh chiết suất $n > 1$ đặt trong không khí, tia (1) phản xạ ở mặt trên (từ không khí sang thủy tinh) nên quang lộ tăng $\lambda/2$; tia (2) phản xạ ở mặt dưới (từ thủy tinh sang không khí) nên không tăng, nhưng đi thêm quãng đường $2d$ trong thủy tinh. Do đó
+\[
+\Delta L = L_2 - L_1 = 2nd - \frac{\lambda}{2}.
+\]
+\begin{enumerate}
+  \item[(a)] Vân sáng: $2nd - \dfrac{\lambda}{2} = k\lambda \Rightarrow d_k = \left(k + \dfrac12\right)\dfrac{\lambda}{2n}$.
+  \item[(b)] Vân tối: $2nd - \dfrac{\lambda}{2} = \left(k + \dfrac12\right)\lambda \Rightarrow d_k = (k + 1)\dfrac{\lambda}{2n}$, $k = -1, 0, 1, \dots$ (tại cạnh nêm là vân tối).
+\end{enumerate}
+\[
+\Delta x = \frac{d_{k+1} - d_k}{\sin\alpha} = \frac{\lambda}{2n\sin\alpha}.
+\]
+
+\item \textit{Newton's Rings.}\\
+Đặt một thấu kính phẳng--lồi (mặt cầu bán kính $R$) lên một bản thủy tinh phẳng; giữa chúng là lớp không khí có bề dày tăng dần từ điểm tiếp xúc. Các vân cùng độ dày là những vòng tròn đồng tâm.
+% TODO: hình — thấu kính tâm O bán kính R trên bản phẳng, điểm M, chân H, rho_k, d_k
+Gọi $\rho_k$ là bán kính vân thứ $k$ và $d_k$ là bề dày lớp không khí tại đó. Trong tam giác $OHM$:
+\[
+R^2 = (R - d_k)^2 + \rho_k^2
+\quad\Rightarrow\quad
+\rho_k^2 = d_k(2R - d_k) \approx 2Rd_k
+\quad (d_k \ll R).
+\]
+Giống nêm không khí, $\Delta L = 2d_k + \dfrac{\lambda}{2}$, nên:
+\begin{enumerate}
+  \item[(a)] Vân tối: $d_k = k\,\dfrac{\lambda}{2} \Rightarrow \boxed{\rho_k = \sqrt{k\lambda R}}$, $k = 0, 1, 2, \dots$ Tâm hệ vân ($k = 0$) là một vết tối.
+  \item[(b)] Vân sáng: $d_k = \left(k - \dfrac12\right)\dfrac{\lambda}{2} \Rightarrow \boxed{\rho_k = \sqrt{\left(k - \tfrac12\right)\lambda R}}$, $k = 1, 2, \dots$
+\end{enumerate}
+Bán kính các vân tối tỉ lệ với căn bậc hai của các số nguyên liên tiếp. Nếu lớp giữa thấu kính và bản là môi trường chiết suất $n_0$ (thay cho không khí) thì
+\[
+r_{Tk}^2 = \frac{k\lambda R}{n_0},
+\qquad
+r_{Sk}^2 = \left(k - \frac12\right)\frac{\lambda R}{n_0}.
+\]
+\end{enumerate}
+
+\section{Diffraction}
+\begin{enumerate}
+\item \textit{Definition.}\\
+Hiện tượng tia sáng bị lệch khỏi phương truyền thẳng khi đi gần các chướng ngại vật được gọi là \textbf{nhiễu xạ ánh sáng}.
+
+\item \textit{The Huygens--Fresnel Principle.}\\
+\begin{enumerate}
+  \item[(a)] Mọi điểm mà ánh sáng truyền đến đều trở thành nguồn sáng thứ cấp phát ánh sáng về phía trước nó.
+  \item[(b)] Biên độ và pha của nguồn thứ cấp là biên độ và pha do nguồn thực gây ra tại vị trí của nguồn thứ cấp.
+\end{enumerate}
+Dao động sáng tại $M$ là tổng các dao động do mọi nguồn thứ cấp trên một mặt $\Sigma$ bao nguồn gây ra:
+\[
+E_M = \oint_\Sigma k\,\frac{E_0}{r_1 r_2}\cos 2\pi\left(\frac{t}{T} - \frac{r_1 + r_2}{\lambda}\right)d\Sigma.
+\]
+Mặt $\Sigma$ được chọn tùy ý; với mỗi bài toán ta chọn $\Sigma$ sao cho việc tính toán thuận lợi nhất.
+
+\item \textit{Fresnel Zones.}\\
+Xét nguồn điểm $S$, mặt sóng cầu bán kính $R$ và điểm quan sát $M$ cách đỉnh mặt sóng $B_0$ một khoảng $b$. Chia mặt sóng thành các \textbf{đới cầu Fresnel} sao cho khoảng cách từ mép hai đới liên tiếp đến $M$ hơn kém nhau $\lambda/2$.
+% TODO: hình — nguồn S, mặt sóng bán kính R, B_0, B_k, M, MB_0 = b, r_k
+\begin{enumerate}
+  \item[(a)] Diện tích mỗi đới (gần như bằng nhau): $\Delta S = \dfrac{\pi R b}{R + b}\,\lambda$.
+  \item[(b)] Bán kính đới thứ $k$: $r_k = \sqrt{\dfrac{Rb\lambda}{R + b}}\,\sqrt{k}$, $k = 1, 2, \dots$
+  \item[(c)] Biên độ tổng hợp tại $M$ khi lỗ tròn chứa $n$ đới:
+  \[
+  a = \frac{a_1}{2} \pm \frac{a_n}{2} \qquad (\text{dấu } + \text{ khi } n \text{ lẻ, dấu } - \text{ khi } n \text{ chẵn}),
+  \]
+  nên $n$ lẻ cho điểm sáng, $n$ chẵn cho điểm tối.
+  \item[(d)] Số đới chứa trong lỗ tròn bán kính $r_n$: $n = \dfrac{r_n^2}{\lambda}\cdot\dfrac{R + b}{Rb}$. Khi $\lambda$ và $R$ cho trước thì $n$ chỉ phụ thuộc vào $r_n$ và $b$.
+\end{enumerate}
+
+\item \textit{Single-Slit Diffraction.}\\
+Chiếu chùm sáng song song vuông góc vào một khe hẹp bề rộng $b$, quan sát trên tiêu diện của thấu kính $L_2$ có tiêu cự $f$. Chia khe thành các \textbf{đới phẳng Fresnel}, ta được:
+\begin{enumerate}
+  \item[(a)] Cực tiểu nhiễu xạ: $\sin\theta = k\,\dfrac{\lambda}{b}$, $k = \pm1, \pm2, \dots$
+  \item[(b)] Cực đại nhiễu xạ phụ: $\sin\theta = (2k+1)\dfrac{\lambda}{2b}$, $k = \pm1, \pm2, \dots$
+\end{enumerate}
+Khoảng cách góc giữa hai cực tiểu thứ nhất là $\Delta\theta \approx \dfrac{2\lambda}{b}$, nên trên tiêu diện của $L_2$ chúng cách nhau
+\[
+d = f\,\frac{2\lambda}{b}.
+\]
+
+\item \textit{Interference from $N$ Point Sources.}\\
+Với $N$ nguồn sáng điểm kết hợp cách đều, lệch pha nhau $\varphi$ giữa hai nguồn liên tiếp:
+\[
+E = e_0\left|\frac{\sin\frac{N\varphi}{2}}{\sin\frac{\varphi}{2}}\right|,
+\qquad
+I = i_0\,\frac{\sin^2\frac{N\varphi}{2}}{\sin^2\frac{\varphi}{2}}.
+\]
+\end{enumerate}
+
+\section{Summary of Formulas}
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Quang lộ & $L = nd = c\tau$ \\
+Cường độ tổng hợp & $I = I_1 + I_2 + 2\sqrt{I_1I_2}\cos(\varphi_1 - \varphi_2)$ \\
+Cực đại / cực tiểu & $\Delta L = k\lambda$ \;/\; $\Delta L = \left(k + \tfrac12\right)\lambda$ \\
+Vân Young & $x_k^s = k\dfrac{\lambda D}{l}$, \quad $x_k^t = \left(k + \tfrac12\right)\dfrac{\lambda D}{l}$ \\
+$N$ vân liên tiếp & $(N - 1)\,i = l_1$ \\
+Bản mỏng & $\Delta L = 2d\sqrt{n^2 - \sin^2 i} - \dfrac{\lambda}{2}$ \\
+Nêm không khí & $\Delta L = 2d + \dfrac{\lambda}{2}$, \quad $\Delta x = \dfrac{\lambda}{2\sin\alpha}$ \\
+Nêm thủy tinh & $\Delta L = 2nd - \dfrac{\lambda}{2}$, \quad $\Delta x = \dfrac{\lambda}{2n\sin\alpha}$ \\
+Vân Newton (môi trường $n_0$) & $r_{Tk}^2 = \dfrac{k\lambda R}{n_0}$, \quad $r_{Sk}^2 = \left(k - \tfrac12\right)\dfrac{\lambda R}{n_0}$ \\
+Đới cầu Fresnel & $r_k = \sqrt{\dfrac{Rb\lambda}{R + b}}\sqrt{k}$ \\
+Khe hẹp & $\sin\theta_{\min} = k\dfrac{\lambda}{b}$ \\
+\bottomrule
+\end{tabular}
+\end{center}

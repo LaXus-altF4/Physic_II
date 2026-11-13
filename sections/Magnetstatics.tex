@@ -1,0 +1,1067 @@
+\chapter{Magnetstatics}
+
+\section{The Lorentz Force Law}
+\begin{enumerate}
+\item \textit{Magnetic Fields.}\\
+Ở chương trước ta đã tìm hiểu về tĩnh điện và các vấn đề liên quan như: điện thế, điện trường, điện môi,.. nhưng đó là khi các điện tích đứng yên vậy nếu nó \textbf{chuyển động} thì sẽ như thế nào?\\ \\ 
+Ta làm thí nghiệm sau, mắc hai dây kim loại vào môt nguồn điện, bật công tắc cho dòng điện chạy qua, có hai trường hợp xảy ra như sau:
+\begin{enumerate}
+  \item[(a)]
+  Xét hình \textbf{(a)} cho dòng điện chạy ngược chiều nhau trên hai đoạn dây, ta thấy hai đoạn dây bị uốn sát lại nhau. 
+  \item[(b)] 
+  Xét hình \textbf{(b)} cho dòng điện chạy cùng chiều trên đoạn dây, lúc này đoạn dây bị phình ra hai phía.
+\end{enumerate}
+Từ thí nghiệm ta thấy rằng, rõ ràng đã có một lực sinh ra tác động lên hai đoạn dây làm nó bị biến dạng. Thật vậy lực đó chính là \textbf{lực từ} đó chính là lực sinh ra khi các điện tử chuyển đọng trong không gian.\\ \\
+Bằng thực nghiệm người ta chứng minh được rằng:
+\[
+\mathbf{F_{mag} = Q[v \times B]}
+\]
+Mặc khác khi điện tích hạt chuyển động thì nó cũng chịu tác đọng của lưccj điện nên ta có phát biểu định luật \textbf{Lorentz} như sau:
+\[
+\mathbf{F = Q [E + v \times B]}
+\]
+Trong đó:
+\begin{enumerate}
+  \item[(a)]
+    $QE$ là lực điện đống vai trò là thành phần nằm ngang khiến hạt di \textbf{di chuyển ngang} theo trục y.
+  \item[(b)]
+    $v \times  B$ là lực từ đống vai trò là thành phần thẳng đứng khiến hạt \textbf{di chuyển lên} theo trục z.
+\end{enumerate}
+\item \textit{Right hand law.}\\
+Để xác định được chiều của lực từ ta sử dụng \textbf{quy tắc bàn tay phải} phát biểu như sau:
+Tay phải hơi nắm lại, ngón cái trở ra chỉ chiều dòng điện. Các ngón tay khác chỉ hướng từ trường có chiều từ cổ tay đến ngón tay.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Right _hand_law.png}
+    \label{fig:p1}
+\end{figure}
+\item \textit{Left hand law.}\\
+Đặt bàn tay trái sao cho lực từ hướng vào lòng bàn tay, các ngón tay duỗi ra hướng chiều dòng điện, ngón cái choãi ra 90 độ chỉ chiều lực từ.
+
+\item \textit{Trajectory of motion.}\\
+Ta thấy rằng quỹ đạo chuyển động của hạt phụ thuộc và \textbf{lực điện} và \textbf{lực từ}. Khi đó tùy thuộc theo vị trí của hai lực này mà hạt sẽ có quỹ đạo chuyển động khác nhau.
+\item [(a)] $\mathbf{v \perp B \perp E.}$\\
+Khi này lực từ đống vai trò là \textbf{lực hướng tâm} khiến hạt di chuyển theo quỹ đạo tròn. Mặc khác lực điện đống vai trò là \textbf{lực đẩy} làm hạt chuyển động nhanh hơn. Dẫn đến quỹ đạo chuyển động của vật khi này là đường \textbf{Cyclotron}.\\
+Ta từ quỹ đạo chuyển động ta tính được một vài thứ liên quan như sau: \\
+\[
+F_{mag} = Q[v \times B] 
+        = QBv\sin{\frac{\pi}{2}} 
+        = QBv
+\]
+Lại có:
+\[
+F_{mag} = ma = m\frac{v^2}{r}
+\]
+Suy ra:
+\[
+m\frac{v^2}{r} = QBv \Rightarrow r = \frac{mv}{QB}
+\]
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{cyclotron_illustration_enhanced.png}
+    \label{fig:p1}
+\end{figure}
+\item [(b)] \textbf{v tùy ý so với B $\perp$ E}:
+Lúc này ta xét trường chỉ có lực từ. Thì quỹ đạo chuyển động của vật sẽ là đường \textbf{hellix}. Để hiểu quỹ đạo chuyển động của vật, ta có hai cách hình dung sau:\\ \\
+\uline{C1}: Ta tách vector vân tốc $v$ ra làm hai thành phần theo quy tắc hình bình hành. Một là $v_{||}$ với \textbf{B}, hai là $v_{\perp}$ với \textbf{B}. Thành phần vuông góc sẽ làm cho hạt chuyển động theo quỹ đạo tròn, đồng thời vì cũng chịu tác động của thành phần song song nên hạt cũng chuyển động thẳng đứng theo trục z.\\ \\ 
+\uline{C2}: Ta tính toán quỹ đạo theo công thức. Giả sử \textbf{B} là hằng, ta chọn trục z sao cho \textbf{B} = $B\hat{z}$. Áp dụng định luật \textbf{Lorentz} suy ra:
+\[
+F_{mag} = m\dot{v} = Q[v \times B]
+\]
+Ta có.
+\[
+v = 
+\begin{bmatrix}
+v_x\\
+v_y\\
+v_z
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+\hat{x}\\
+\hat{y}\\
+\hat{z}
+\end{bmatrix}
+, B =
+\begin{bmatrix}
+0\\
+0\\
+B
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+\hat{x}\\
+\hat{y}\\
+\hat{z}
+\end{bmatrix}
+\]
+Ta tính được tích $B \times v$.
+\[
+\left|
+\begin{bmatrix}
+v_x\hat{x}\\
+v_y\hat{y}\\
+v_z\hat{z}
+\end{bmatrix}
+\times
+\begin{bmatrix}
+0\\
+0\\
+B\hat{z}
+\end{bmatrix}
+\right|
+=
+\begin{vmatrix}
+\hat{x} & \hat{y} &\hat{z} \\
+v_x & v_y & v_z \\
+0 & 0 & B
+\end{vmatrix}
+=
+\begin{bmatrix}
+v_yB \\
+-v_xB \\
+0
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+\hat{x}\\
+\hat{y}\\
+\hat{z}
+\end{bmatrix}
+\]
+Dẫn đến ta có hệ sau.
+\[
+\begin{cases}
+&m\dot{v_x} = Qv_yB \\[6pt]
+
+&m\dot{v_y} = -Qv_xB \\[6pt]
+
+&m\dot{v_z} = 0
+\end{cases}
+\]
+Đặt $\omega_{c}= \frac{QB}{m}$, ta được các phương trình vi phân sau.
+\[
+\ddot{v_x} = -\omega_{c}^2v_x \Leftrightarrow \ddot{v_x} + \omega_{c}^2v_x = 0
+\]
+\[
+\ddot{v_y} = -\omega_{c}^2v_y \Leftrightarrow \ddot{v_y} + \omega_{c}^2v_y = 0
+\]
+\[
+m\dot{v_z} = 0 \Rightarrow v_z = v_{z0}
+\]
+Vậy $v_x, v_y$ dao động điều hòa theo trục x và y với cùng tần số $\left|\omega_c\right|$
+.
+\[
+v_x = v_{\perp}\cos(\omega_{c}t + \phi), v_y = -v_{\perp}\sin(\omega_{c}t + \phi)
+\]
+(Dấu trừ chỉ là chọn pha; sẽ quyết định chiều quay theo dấu của Q)
+\begin{center}
+Các phương trình tương đương.
+\end{center}
+\[
+\dot{x} = v_{\perp}\cos(\omega_{c}t + \phi) \Rightarrow x = x_0 + \frac{v_{\perp}}{\omega_{c}}\sin(\omega_{c}t + \phi)
+\]
+\[
+\dot{y} = -v_{\perp}\cos(\omega_{c}t + \phi) \Rightarrow y = y_0 + \frac{v_{\perp}}{\omega_{c}}\cos(\omega_{c}t + \phi)
+\]
+\[
+\dot{z}=v_{z0} \Rightarrow z = z_0 + v_{z0}t
+\]
+Ta tính được ngay kết quả sau:
+\[
+(x-x_0)^2 +(y-y_0)^2 = (\frac{v_{\perp}}{\omega_{c}})^2
+\]
+\textbf{Bán kính quỹ đạo} là
+\[
+R = \frac{v_{\perp}}{\omega_c} = \frac{mv_{\perp}}{QB}
+\]
+\textbf{Chu kỳ quỹ đạo} là
+\[
+T = \frac{2\pi}{\omega_c} = \frac{2\pi m}{QB}
+\]
+\textbf{Bước xoắn của quỹ đạo} là
+\[
+p = v_{z0}\frac{2\pi}{\omega_c} = v_{z0}\frac{2\pi m}{QB}
+\]
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{hellix_motion.png}
+    \label{fig:p1}
+\end{figure}\\
+\item [(c)] \textbf{v tùy ý so với} $\mathbf{B \perp E}$:
+Nhưng khi này ta xét đến cả lực điện, quỹ đạo chuyển động của hạt sẽ khác nhiều so với chuyển động ở \textbf{(b)} đó là quỹ đạo của đường \textbf{Cycloid}.\\
+Ta sẽ chứng minh quỹ đạo đó, chọn trục x, z sao cho \textbf{B} $= B \hat{x}$, \textbf{E} $=E\hat{z}$ áp dụng định luật \textbf{Lorentz} suy ra.
+\[
+F = m\dot{v} = Q[E + v \times B]
+\]
+Ta có.
+\[
+v = 
+\begin{bmatrix}
+\dot{x}\\
+\dot{y}\\
+\dot{z}
+\end{bmatrix}
+, \dot{v} =
+\begin{bmatrix}
+\ddot{x}\\
+\ddot{y}\\
+\ddot{z}
+\end{bmatrix}
+, B =
+\begin{bmatrix}
+B\\
+0\\
+0
+\end{bmatrix}
+, E =
+\begin{bmatrix}
+0\\
+0\\
+E
+\end{bmatrix}
+\]
+Tương tự ý \textbf{(b)} ta cũng tính được.
+\[
+B \times v
+=
+\begin{vmatrix}
+\hat{x} & \hat{y} &\hat{z} \\
+\dot{x} & \dot{y} & \dot{z} \\
+B & 0 & 0
+\end{vmatrix}
+=
+\begin{bmatrix}
+0 \\
+\dot{z}B \\
+-\dot{y}B
+\end{bmatrix}
+\]
+Từ đó ta cũng có hệ.
+\[
+\begin{cases}
+&m\ddot{x} = 0\\[6pt]
+
+&m\ddot{y} =QB\dot{z} \\[6pt]
+
+&m\ddot{z} = QE -QB\dot{y}
+\end{cases}
+\]
+Đặt $\omega = \frac{QB}{m}$, đây chính là hệ số góc của \textbf{Cyclotron motion}.
+\[
+\Rightarrow
+\begin{cases}
+&\dot{x} = C \\[6pt]
+
+&\ddot{y} =\omega\dot{z} \\[6pt]
+
+&\ddot{z} = \omega(\frac{E}{B}-\dot{y})
+\end{cases}
+\Leftrightarrow
+\begin{cases}
+&x = x_{0} + v_{x0}t \\[6pt]
+
+&\ddot{z} = \frac{\dddot{y}}{\omega}\\[6pt]
+
+&\dddot{y} = \omega^2(\frac{E}{B}-\dot{y})
+\end{cases}
+\]
+Ta sẽ phương trình vi phân trên bằng \textbf{Laplace Transform}.
+\begin{align*}
+&\, \, \, \, \, \, \, \,
+\mathcal{L}\{\dddot{y}\}
+=
+\mathcal{L}\{\omega^2(\frac{E}{B} - \dot{y})\}
+=
+\mathcal{L}\{\omega^2\frac{E}{B}\} - \mathcal{L}\{\omega^2\dot{y}\}\\[6pt]
+&\Leftrightarrow
+s^3\mathcal{L}\{y(t)\} - s^2y(0) - s\dot{y(0)} -\ddot{y(0)}
+=
+\frac{\omega^2\frac{E}{B}}{s} - s\omega^2\mathcal{L}\{y(t)\} + \omega^2\dot{y(0)}\\[6pt]
+&\Leftrightarrow
+(s^3+s\omega^2)\mathcal{L}\{y(t)\}
+=
+\ddot{y(0)} + (s+\omega^2)\dot{y(0)} + s^2y(0) + \frac{\omega^2\frac{E}{B}}{s}\\[6pt]
+&\Leftrightarrow
+\mathcal{L}\{y(t)\}
+=
+\frac{\omega^2\frac{E}{B}}{s^2(s^2+\omega^2)} = \frac{\frac{E}{B}}{s^2} - \frac{\frac{E}{B}}{s^2+\omega^2}\\[6pt]
+&\Leftrightarrow
+y(t)
+=
+\mathcal{L}^{-1}\{\frac{E}{B\omega}(\frac{\omega}{s^2} - \frac{\omega}{s^2+\omega^2})\} = \frac{E}{B\omega}(\mathcal{L}^{-1}\{\frac{\omega}{s^2}\} - \mathcal{L}^{-1}\{\frac{\omega}{s^2+\omega^2}\}) \\[6pt] 
+&\Leftrightarrow
+y(t)
+= 
+\frac{E}{B\omega}(\omega t - \sin(\omega t))
+\end{align*}
+\textbf{Chú ý:} do ban đầu hạt đứng yên nên $\ddot{y(0)} = 0, \dot{y(0)} = 0, y(0) = 0, z(0) = 0$. Tiếp theo ta thay $y(t)$ vào hệ để tìm $z$.
+\[
+\dot{z} =
+\frac{\ddot{y}}{\omega}
+=
+\frac{1}{\omega}\frac{\partial^2{\frac{E}{B\omega}[\omega t - \sin(\omega t)]}}{\partial^2{t}} = \frac{1}{\omega}\frac{E}{B\omega}\omega^2\sin(\omega t)
+\]
+Suy ra.
+\[
+z =
+\frac{1}{\omega}\frac{E}{B\omega}[C-\omega\cos(\omega t)]
+\]\\
+Tại $t = 0$ thì $C = \omega$, nên 
+\[
+z =
+\frac{E}{B\omega}[1 - \cos(\omega t)]
+\]
+Đặt $\mathbf{R} = \frac{E}{B\omega}$ suy ra.
+\[
+(y-R\omega t)^2 + (z - R)^2 = R^2
+\]
+\\
+Phương trình trên chính là phương trình \textbf{đường tròn} có tâm $(0, R\omega t, R)$, vận tốc của hạt khi di chuyển theo trục $y$ là:
+\[
+v = \omega R = \frac{E}{B}
+\]
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Cycloid_motion.png}
+    \label{fig:p1}
+\end{figure}
+\end{enumerate}
+
+Khi tìm hiểu về tác dụng của lực \textbf{Lorentz} lên hạt mang điện, ta có một lưu ý rất quang trọng:
+\begin{center}
+\textbf{LỰC TỪ KHÔNG SINH CÔNG}
+\end{center}
+điều này có nghĩa $\mathbf{W} = 0$. Thật vậy từ công thức tính lực từ ta có
+\[
+\mathbf{F_{mag}} = Qv \times B \Rightarrow d\mathbf{W_{mag}} = \mathbf{F_{mag}} \cdot dl = \mathbf{F_{mag}} = Qv \times B \cdot vdt = 0
+\]
+Điều này rất phản trực giác vì ta thấy các máy từ khi nâng một chiếc xe trong bãi phế liệu thì rõ ràng đã có gì đó đã sinh công để nâng được chiếc xe lên cao, nếu không phải lực từ làm điều đó thì \textbf{cái gì đã thực hiện công ?}. Chúng ta sẽ làm rõ vấn đề đó khi tìm hiều về phần tiếp theo.
+
+\begin{enumerate}
+\item \textit{Curents.}\\
+Dòng điện là đại lượng đặc trưng là chyển động của điện tích, ta ký hiệu
+\[
+\mathbf{I} = \frac{dq}{dt}
+\]
+
+Trong các bài toán đơn giản ta thường xem $I$ là đại lượng vô hướng, tuy nhiên điều này không đúng, để tránh nhầm lẫn cho sau này ta thông nhất từ lúc định nghĩa rằng $I$ là đại lượng có hướng đặc trưng cho tốc độ chuyển động của điện tích, có đơn vị là:
+\[
+\mathbf{I} = S.n_{0}.v.q_{0}
+\]
+Ta xét một ví dụ thú vị sau: Xét một khung dây hình vuông có chiều dài là $a$ khối lượng là $m$, một cạnh của khung dây được đặt trong từ trường đều $B$ hướng vào mặt giấy. Khung dây được nối với nguồn điện một chiều, hãy tìm cường độ dòng điện $I$
+\end{enumerate}
+
+\begin{enumerate}
+  \item{Bài 1:} Cho dây dẫn hình trụ thẳng dài vô hạn, bán kính $R$, dòng điện $I$ chạy trên mặt dây dẫn. Tính từ trường tại một điểm M cách trục dây dẫn một khoảng $r$ với $r < R$ và $r > R$.
+\textbf{Giải:} Theo định luật biot-savart ta có:
+\[\vec{B} = \frac{\mu_0 \mu}{4\pi}\int \frac{I d\vec{l} \times \vec{r'}}{r^3}\]
+sử dụng hệ tọa độ trụ, ta có $d\mathbf{l} = R d\phi . dz$, đặt r' là khoảng cách từ phần tử điện tích dl đến M, S là diện tích mặt của ống dây dẫn. Thay vào công thức trên ta được:
+\[
+\vec{B} = \frac{\mu_0 \mu}{4\pi} \iint_S \frac{IR . \sin(\vec{r'}, d\vec{l})}{r'^2} \, dzd\phi
+\]
+Từ M kẻ vuông góc với trục dây dây dẫn, cắt trục dây dẫn tại O, đặt $r_{o}$ là khoảng cách từ M đến mặt dây dẫn, Gọi z' là điểm từ phần tử điện tích dl đến OM. Xét tam giác tạo bởi 3 cạnh z', r' và $r_{o}$. Dễ thấy $\sin(\vec{r'}, d\vec{l}) = \frac{r_{o}}{r'}$. Ta có:
+\[\vec{B} = \frac{\mu_0 \mu}{4\pi}\iint_S \frac{IR . \frac{r_{o}}{r'}}{r'^{2}} \, dzd\phi = \frac{\mu_0 \mu}{4\pi}\iint_S \frac{IR r_{o}}{r'^{3}} \,dzd\phi\]
+Ta có $r' = \sqrt{z'^2 + r_{o}^2}$, thay vào công thức trên ta được:
+\[\vec{B} = \frac{\mu_0 \mu}{4\pi}\iint_S \frac{IR r_{o}}{(z'^2 + r_{o}^2)^{\frac{3}{2}}} \, dzd\phi\]
+Ta tích phân theo z trước, ta có:
+\[\int_{-\infty}^{+\infty} \frac{IR r_{o}}{(z'^2 + r_{o}^2)^{\frac{3}{2}}} \, dz' = \frac{2IR}{r_{o}}\]
+Thay vào công thức trên ta được:
+\[\vec{B} = \frac{\mu_0 \mu}{4\pi}\int_0^{2\pi} \frac{2IR}{r_{o}} \, d\phi\]
+Mà $r_{o}^2 = r^2 + R^2 -2 rR\cos\phi$, nên:
+\[\vec{B} = \frac{\mu_0 \mu}{4\pi}\int_0^{2\pi} \frac{2IR}{\sqrt{r^2 + R^2 - 2 rR\cos\phi}} \, d\phi\]
+\end{enumerate}
+
+  $\textbf{Bài 2:}$ Một vòng dây dẫn kín tạo thành bởi một dây dẫn đồng chất được uốn theo đường cong OP, được mô tả bởi phương trình trong tọa độ cực: $r = a.e^{\phi}$, với $\phi$ chạy từ 0 đến $2\pi$. Dòng điện $I$ chạy qua vòng dây. Tính từ trường tại tâm O của vòng dây.\\
+$\textbf{Giải:}$ Áp dụng quy tắc bàn tay phải để xác định từ cảm ta thấy d$\vec{B}$ luôn hướng ra ngoài vậy,
+\[\vec{B} = \int \, d\vec{B}\]
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Mag_bai2.png}
+    \label{fig:p1}
+\end{figure}
+Theo định luật biot-savart ta có:
+\[\vec{B} = \frac{\mu_0 \mu}{4\pi}\int \frac{I d\vec{l} \times \vec{r}}{r^3}\]
+Ta thấy rằng $d\vec{l}$ là phần tử vector tiếp tuyến của OP. Ta cần tính góc giữa $d\vec{l}$ và $\vec{r}$, lấy A là một điểm trên OP ta phân tích $d\vec{l}$ thành hai thành phần: một thành phần song song với OA, một thành phần vuông góc với OA. Ta thấy rằng thành phần song song sẽ không đóng góp vào từ trường tại O, chỉ có thành phần vuông góc mới đóng góp vào từ trường tại O. Do đó ta chỉ cần tính thành phần vuông góc của $d\vec{l}$ với OA. Ta có:
+\[(\vec{r}, d\vec{l}) = (\vec{r}, d\vec{r} + rd\vec{\phi}) = (\vec{r}, rd\vec{\phi}) + (\vec{r}, d\vec{r}) = (\vec{r}, rd\vec{\phi})\] \\
+Ta thấy rằng $\tan({\vec{r}, rd\vec{\phi}}) = \frac{dr}{rd\phi} = \frac{1}{r}\frac{\partial{a.e^{\phi}}}{\partial{\phi}} = \frac{r}{r} = 1$ $\Rightarrow (\vec{r}, rd\vec{\phi}) = \frac{\pi}{4}$ \\
+Chiếu $d\vec{l}$ lên phương $d\vec{r}$ và $rd\vec{\phi}$ thì $d\vec{l} = d\vec{r}\cos(\frac{\pi}{4}) + rd\vec{\phi}\sin(\frac{\pi}{4})$
+\[
+\Rightarrow B = \frac{\mu_0 \mu I}{4\pi} \int \frac{\left|rd\vec{\phi} \times \vec{r}\right| \sin(rd\vec{\phi}, \vec{r})}{r^2} \sin(\frac{\pi}{4}) = \frac{\mu_0 \mu I}{4\pi} \int_0^{2\pi} \frac{rd\phi \sin(\frac{\pi}{4})^2}{r^2} 
+\]
+Vậy,
+\[
+B = \frac{\mu_0 \mu I}{4\pi} \int_0^{2\pi} \frac{1}{2} \frac{d\phi}{r} = \frac{\mu_{0} \mu I}{8 \pi} a (1 - e^{-2\pi})
+\]
+\textbf{Bài 3:} Dòng điện cường độ I chạy trong dây dẫn thẳng dài vô hạn trong mặt phẳng vuông góc với dây dẫn ấy tại O, đặt một khung dây điện MNPQ, MN và PQ là hai nửa đường tròn tâm O bán kính OM và ON = a, OP = OQ = b > a; bốn điểm MNPQ thẳng hàng với tâm O. Trong khung có cường độ dòng điện $I_{o}$. Chứng minh rằng các  lực từ tác dụng lên khung tạo thành một ngẫu lực. Xác định ngẫu lực đó.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Mag_bai3.png}
+    \label{fig:p1}
+\end{figure}
+
+% =====================================================================
+%  PHẦN TIẾP THEO — soạn từ vở viết tay "Chương 5: Từ Trường"
+% =====================================================================
+
+\section{The Biot--Savart Law}
+\begin{enumerate}
+\item \textit{Current Elements.}\\
+\textbf{Phần tử dòng điện} là một đoạn dây dẫn rất nhỏ có chiều dài $dl$ mang dòng điện cường độ $I$. Ta biểu diễn nó bằng vector $I\,d\vec{l}$, nằm theo tiếp tuyến với dây dẫn và hướng theo chiều dòng điện.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[scale=1.4, x={(-0.55cm,-0.42cm)}, y={(1cm,0cm)}, z={(0cm,1cm)},
+        vec/.style={-{Stealth}, thick, darkblue}]
+        % mặt phẳng chứa I dl và r
+        \fill[darkblue!8] (0,0,0) -- (0,2.2,0) -- (-2.2,3.1,0) -- (-2.2,0.9,0) -- cycle;
+        \draw[thin, dashed] (0,-0.7,0) -- (0,0,0);
+        \draw[thin, dashed] (0,1.6,0) -- (0,2.4,0);
+        % phần tử I dl tại A và vector r = AM
+        \draw[vec] (0,0,0) -- (0,1.6,0) node[pos=0.55, below=2pt] {$I\,d\vec{l}$};
+        \draw[-{Stealth}, semithick] (0,0,0) -- (-2.2,0.9,0) node[pos=0.5, above left=1pt] {$\vec{r}$};
+        \draw[thin] plot[domain=90:158, samples=10, variable=\t]
+            ({0.7*cos(\t)},{0.7*sin(\t)},0);
+        \node at ({1.05*cos(124)},{1.05*sin(124)},0) {\small $\alpha$};
+        % tại M: dB, phần tử I_0 dl_0 và dF = I_0 dl_0 x dB
+        \draw[vec] (-2.2,0.9,0) -- ++(0,0,1.5) node[above] {$d\vec{B}$};
+        \draw[vec] (-2.2,0.9,0) -- ++(-1.3,0,0) node[above right] {$I_0\,d\vec{l}_0$};
+        \draw[vec] (-2.2,0.9,0) -- ++(0,1.3,0) node[right] {$d\vec{F}$};
+        \fill (0,0,0) circle (1.2pt) node[below left] {$A$};
+        \fill (-2.2,0.9,0) circle (1.2pt) node[below=3pt] {$M$};
+    \end{tikzpicture}
+\end{figure}
+
+\item \textit{Ampère's Force Law.}\\
+Xét hai phần tử dòng điện $I\,d\vec{l}$ gốc tại $A$ và $I_0\,d\vec{l}_0$ gốc tại $M$, đặt $\vec{r} = \vec{AM}$. Thực nghiệm cho thấy lực từ do $I\,d\vec{l}$ tác dụng lên $I_0\,d\vec{l}_0$ là
+\begin{equation}\label{eq:ampere-force}
+d\vec{F} = k'\,\frac{I_0\,d\vec{l}_0 \times \left(I\,d\vec{l} \times \vec{r}\right)}{r^3},
+\end{equation}
+trong đó $k'$ là hệ số tỉ lệ phụ thuộc vào tính chất của môi trường và hệ đơn vị. Để khai triển tích có hướng kép ta dùng công thức \textbf{BAC--CAB}:
+\[
+\vec{A} \times (\vec{B} \times \vec{C}) = \vec{B}(\vec{A}\cdot\vec{C}) - \vec{C}(\vec{A}\cdot\vec{B}).
+\]
+Gọi $\vec{n}$ là vector đơn vị cùng hướng với $I\,d\vec{l} \times \vec{r}$, tức $\vec{n}$ vuông góc với mặt phẳng chứa $I\,d\vec{l}$ và $\vec{r}$, có chiều thuận đối với chiều quay từ $I\,d\vec{l}$ sang $\vec{r}$ (quy tắc bàn tay phải). Khi đó:
+\begin{enumerate}
+  \item[(a)] Phương của $d\vec{F}$ vuông góc với $I_0\,d\vec{l}_0$ và $\vec{n}$.
+  \item[(b)] Chiều của $d\vec{F}$ là chiều thuận đối với chiều quay từ $I_0\,d\vec{l}_0$ sang $\vec{n}$.
+  \item[(c)] Độ lớn
+  \[
+  dF = k'\,\frac{(I_0\,dl_0\sin\alpha_0)(I\,dl\sin\alpha)}{r^2},
+  \qquad \alpha = (d\vec{l}, \vec{r}),\quad \alpha_0 = (d\vec{l}_0, \vec{n}).
+  \]
+\end{enumerate}
+Trong chân không, với hệ SI, $k' = 10^{-7}$ và thường được viết dưới dạng $k' = \dfrac{\mu_0}{4\pi}$ với
+\[
+\mu_0 = 4\pi\cdot 10^{-7}\ \text{H/m} \quad (\text{hằng số từ}).
+\]
+Nếu các phần tử dòng điện đặt trong một môi trường khác chân không thì lực tương tác tăng lên $\mu$ lần ($\mu$ là \textbf{độ từ thẩm} của môi trường). Ta có công thức Ampère tổng quát:
+\[
+d\vec{F} = \frac{\mu\mu_0}{4\pi}\,\frac{I_0\,d\vec{l}_0 \times \left(I\,d\vec{l} \times \vec{r}\right)}{r^3},
+\qquad
+dF = \frac{\mu\mu_0}{4\pi}\,\frac{I_0\,dl_0\sin(d\vec{l}_0,\vec{n})\; I\,dl\sin(d\vec{l},\vec{r})}{r^2}.
+\]
+
+\item \textit{The Magnetic Induction Vector.}\\
+Để đặc trưng cho từ trường về mặt tác dụng lực, ta làm tương tự như với điện trường. Lực tương tác giữa hai điện tích và vector điện trường là
+\[
+\vec{F} = \frac{1}{4\pi\ep_0}\frac{q q_0}{r^3}\,\vec{r}
+\quad\Rightarrow\quad
+\vec{E} = \frac{\vec{F}}{q_0} = \frac{1}{4\pi\ep_0}\frac{q}{r^2}\,\hat{r}.
+\]
+$\vec{E}$ không phụ thuộc vào $q_0$ mà chỉ phụ thuộc vào $q$ và vị trí đặt $q_0$, nên nó đặc trưng cho điện trường do $q$ gây ra. Hoàn toàn tương tự, từ \cref{eq:ampere-force} ta tách ra đại lượng
+\begin{equation}\label{eq:bsl}
+d\vec{B} = \frac{\mu\mu_0}{4\pi}\,\frac{I\,d\vec{l} \times \vec{r}}{r^3}.
+\end{equation}
+Đại lượng này chỉ phụ thuộc vào phần tử dòng điện $I\,d\vec{l}$ sinh ra từ trường và vị trí điểm $M$ (qua khoảng cách $r$), không phụ thuộc vào phần tử $I_0\,d\vec{l}_0$ đặt tại $M$. Vì vậy $d\vec{B}$ được gọi là \textbf{vector cảm ứng từ} (vector từ cảm) do $I\,d\vec{l}$ sinh ra tại $M$, và
+\[
+d\vec{F} = I_0\,d\vec{l}_0 \times d\vec{B}.
+\]
+
+\begin{theorem}[Biot--Savart--Laplace]
+Vector cảm ứng từ $d\vec{B}$ do phần tử dòng điện $I\,d\vec{l}$ gây ra tại điểm $M$ cách nó một khoảng $r$ có:
+\begin{enumerate}
+  \item[(a)] gốc tại $M$;
+  \item[(b)] phương vuông góc với mặt phẳng chứa $I\,d\vec{l}$ và $\vec{r}$;
+  \item[(c)] chiều sao cho $I\,d\vec{l}$, $\vec{r}$, $d\vec{B}$ hợp thành tam diện thuận;
+  \item[(d)] độ lớn
+  \[
+  dB = \frac{\mu\mu_0}{4\pi}\,\frac{I\,dl\sin(d\vec{l},\vec{r})}{r^2}.
+  \]
+\end{enumerate}
+\end{theorem}
+
+\item \textit{Superposition Principle.}\\
+Vector cảm ứng từ do một dòng điện bất kỳ gây ra tại một điểm bằng tổng các vector cảm ứng từ do các phần tử của dòng điện đó gây ra tại điểm ấy:
+\[
+\vec{B} = \int_{\text{cả dòng điện}} d\vec{B}.
+\]
+Nếu có nhiều dòng điện thì $\vec{B} = \vec{B}_1 + \vec{B}_2 + \dots + \vec{B}_n$. Như vậy, với định luật Biot--Savart--Laplace và nguyên lý chồng chất, ta tính được từ trường do bất kỳ dòng điện nào gây ra tại mọi điểm.
+
+\item \textit{Magnetic Field of a Moving Charge.}\\
+Giả sử dòng điện $I$ trong đoạn dây $dl$ được tạo thành bởi các hạt điện tích $q_0$ chuyển động có hướng với cùng vận tốc $\vec{v}$. Gọi $N$ là số hạt trong đoạn dây; từ cảm do một hạt gây ra tại $M$ là
+\[
+\vec{B}_0 = \frac{d\vec{B}}{N},
+\qquad
+B_0 = \frac{dB}{N} = \frac{\mu\mu_0}{4\pi}\,\frac{I\,dl\sin\alpha}{r^2 N}.
+\]
+Với $N = (S\,dl)\,n_0$ ($n_0$ là mật độ hạt) và mật độ dòng $j = \dfrac{I}{S} = n_0 q_0 v$, ta được
+\[
+B_0 = \frac{\mu\mu_0}{4\pi}\,\frac{j\sin\alpha}{r^2 n_0} = \frac{\mu\mu_0}{4\pi}\,\frac{q_0 v\sin\alpha}{r^2},
+\]
+hay dưới dạng vector ($q_0$ là giá trị đại số của điện tích):
+\[
+\vec{B}_0 = \frac{\mu\mu_0}{4\pi}\,\frac{q_0\,\vec{v} \times \vec{r}}{r^3}.
+\]
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[vec/.style={-{Stealth}, thick, darkblue}]
+        % q_0 > 0 : B_0 hướng ra khỏi trang
+        \begin{scope}
+            \draw (0,0) circle (0.2) node {\scriptsize $+$};
+            \draw[vec] (0.2,0) -- (1.7,0) node[midway, below] {$\vec{v}$};
+            \draw[-{Stealth}, semithick] (0.14,0.14) -- (2.2,1.5) node[midway, above left] {$\vec{r}$};
+            \draw[thin] (0.8,0) arc[start angle=0, end angle=34, radius=0.8];
+            \node at (1.05,0.2) {\small $\alpha$};
+            \draw[thick, darkblue] (2.2,1.5) circle (0.17);
+            \fill[darkblue] (2.2,1.5) circle (0.04);
+            \node[right] at (2.45,1.5) {$\vec{B}_0$};
+            \fill (2.2,1.5) ++(0,0) circle (0pt) node[above=0.22cm] {$M$};
+            \node at (1.2,-1.0) {$q_0>0$};
+        \end{scope}
+        % q_0 < 0 : B_0 hướng vào trang
+        \begin{scope}[xshift=6.2cm]
+            \draw (0,0) circle (0.2) node {\scriptsize $-$};
+            \draw[vec] (0.2,0) -- (1.7,0) node[midway, below] {$\vec{v}$};
+            \draw[-{Stealth}, semithick] (0.14,0.14) -- (2.2,1.5) node[midway, above left] {$\vec{r}$};
+            \draw[thin] (0.8,0) arc[start angle=0, end angle=34, radius=0.8];
+            \node at (1.05,0.2) {\small $\alpha$};
+            \draw[thick, darkblue] (2.2,1.5) circle (0.17);
+            \draw[thick, darkblue] (2.2,1.5) ++(45:0.17) -- ++(225:0.34);
+            \draw[thick, darkblue] (2.2,1.5) ++(135:0.17) -- ++(315:0.34);
+            \node[right] at (2.45,1.5) {$\vec{B}_0$};
+            \node[above=0.22cm] at (2.2,1.5) {$M$};
+            \node at (1.2,-1.0) {$q_0<0$};
+        \end{scope}
+    \end{tikzpicture}
+\end{figure}
+
+So sánh với \cref{eq:bsl} ta kết luận: cả về phương diện \textbf{gây ra} từ trường lẫn \textbf{chịu tác dụng} của từ trường, một hạt điện tích $q_0$ chuyển động với vận tốc $\vec{v}$ tương đương với một phần tử dòng điện
+\[
+I\,d\vec{l} = q_0\,\vec{v}.
+\]
+\end{enumerate}
+
+\section{Magnetic Field Intensity and Ampère's Circuital Law}
+\begin{enumerate}
+\item \textit{The Vector $\vec{H}$.}\\
+Tại một điểm có từ trường, ta định nghĩa \textbf{vector cường độ từ trường}
+\[
+\vec{H} = \frac{\vec{B}}{\mu\mu_0},
+\]
+có đơn vị A/m. Hệ thức này chỉ đúng cho môi trường đẳng hướng; với môi trường dị hướng nó được thay bằng một hệ thức phức tạp hơn. Về ý nghĩa vật lý, $\vec{H}$ đặc trưng cho từ trường do bản thân các dòng điện gây ra, chưa kể đến vai trò của môi trường:
+\[
+d\vec{H} = \frac{1}{4\pi}\,\frac{I\,d\vec{l} \times \vec{r}}{r^3}.
+\]
+Với dây dẫn thẳng dài vô hạn, trong hệ tọa độ trụ có $Oz$ dọc theo dây và hướng theo chiều dòng điện,
+\[
+H = \frac{I}{2\pi r},
+\qquad
+\vec{H} = \left(0,\ \frac{I}{2\pi r},\ 0\right) = \frac{I}{2\pi r}\,\hat{\varphi}.
+\]
+
+\item \textit{Circulation of $\vec{H}$.}\\
+Ta tính lưu số của $\vec{H}$ do dây dẫn thẳng dài vô hạn gây ra dọc theo một đường cong $\widehat{PQ}$. Để đơn giản, giả sử $\widehat{PQ}$ là đường cong phẳng nằm trong mặt phẳng vuông góc với dây tại $O$. Khi đó
+\[
+\int_{\widehat{PQ}} \vec{H}\cdot d\vec{l}
+= \int_{\widehat{PQ}} \left(H_r\,dr + H_\varphi\,r\,d\varphi + H_z\,dz\right)
+= \int_{\widehat{PQ}} \frac{I}{2\pi r}\,r\,d\varphi
+= \frac{I}{2\pi}\int_{\widehat{PQ}} d\varphi.
+\]
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[vec/.style={-{Stealth}, thick, darkblue}]
+        % (a) (C) bao quanh dây dẫn
+        \begin{scope}
+            \draw[thick, darkblue, smooth cycle]
+                plot coordinates {(1.6,0) (1.1,1.3) (-0.4,1.7) (-1.6,0.6) (-1.5,-0.9) (0,-1.6) (1.2,-1.1)};
+            \draw[vec] (1.6,-0.2) -- (1.6,0.25) node[right] {$d\vec{l}$};
+            \draw[thin, dashed] (0,0) -- (1.3,0);
+            \draw[thin, dashed] (0,0) -- (22:1.3);
+            \draw[thin] (0.8,0) arc[start angle=0, end angle=22, radius=0.8];
+            \node at (11:1.08) {\scriptsize $d\varphi$};
+            \draw[thick] (0,0) circle (0.13);
+            \fill (0,0) circle (0.035);
+            \node[below left] at (0,0) {$O$};
+            \node at (-1.1,1.55) {$(C)$};
+            \node[above left] at (0,0) {\small $I$};
+            \node at (0,-2.2) {(a)};
+        \end{scope}
+        % (b) (C) không bao quanh dây dẫn
+        \begin{scope}[xshift=5.6cm]
+            \draw[thin, dashed] (0,0) -- (17.9:2.474);
+            \draw[thin, dashed] (0,0) -- (-17.9:2.474);
+            \draw[thick, darkblue] (2.6,0) circle (0.8);
+            \draw[vec] (3.4,-0.2) -- (3.4,0.25) node[right] {$d\vec{l}$};
+            \draw[thin] (1.0,0) arc[start angle=0, end angle=17.9, radius=1.0];
+            \draw[thin] (1.0,0) arc[start angle=0, end angle=-17.9, radius=1.0];
+            \node at (1.35,0) {\scriptsize $\Delta\varphi$};
+            \draw[thick] (0,0) circle (0.13);
+            \fill (0,0) circle (0.035);
+            \node[below left] at (0,0) {$O$};
+            \node at (2.6,1.2) {$(C)$};
+            \node[above left] at (0,0) {\small $I$};
+            \node at (1.9,-2.2) {(b)};
+        \end{scope}
+    \end{tikzpicture}
+\end{figure}
+Xét trường hợp $\widehat{PQ}$ là một đường cong kín $(C)$:
+\begin{enumerate}
+  \item[(a)] Nếu $(C)$ bao quanh dây dẫn thì $\oint_{(C)} d\varphi = 2\pi$, do đó
+  \[
+  \oint_{(C)} \vec{H}\cdot d\vec{l} = \frac{I}{2\pi}\cdot 2\pi = I
+  \]
+  khi chiều tích phân là chiều dương đối với chiều của $I$, và bằng $-I$ trong trường hợp ngược lại.
+  \item[(b)] Nếu $(C)$ không bao quanh dây dẫn thì góc quét đi rồi quét về: $\oint_{(C)} d\varphi = \Delta\varphi - \Delta\varphi = 0$, nên $\oint_{(C)} \vec{H}\cdot d\vec{l} = 0$.
+\end{enumerate}
+
+\item \textit{Ampère's Circuital Law.}\\
+Người ta chứng minh được rằng kết quả trên vẫn đúng cho từ trường của một hay nhiều dòng điện bất kỳ.
+\begin{theorem}[Ampère]
+Lưu số của vector cường độ từ trường dọc theo một đường cong kín $(C)$ bất kỳ bằng tổng đại số cường độ các dòng điện xuyên qua diện tích giới hạn bởi $(C)$:
+\[
+\oint_{(C)} \vec{H}\cdot d\vec{l} = \sum_k \ep_k I_k,
+\]
+trong đó $\ep_k = +1$ nếu chiều tích phân trên $(C)$ là chiều thuận đối với chiều của $I_k$, và $\ep_k = -1$ nếu ngược lại.
+\end{theorem}
+Định lý Ampère nêu lên một tính chất đặc biệt của từ trường: $\oint_{(C)} \vec{H}\cdot d\vec{l}$ \textbf{không luôn luôn bằng 0}, trái với điện trường tĩnh có $\oint_{(C)} \vec{E}\cdot d\vec{l} = 0$. Vậy từ trường không phải là trường thế, nó là một \textbf{trường xoáy}.
+\end{enumerate}
+
+\section{Magnetic Flux and Gauss's Law for Magnetism}
+\begin{enumerate}
+\item \textit{Magnetic Field Lines.}\\
+Đường sức từ là những đường cong vẽ trong không gian có từ trường sao cho tiếp tuyến tại mỗi điểm trùng với phương của vector cảm ứng từ tại điểm đó. Các tính chất:
+\begin{enumerate}
+  \item[(a)] Qua mỗi điểm trong không gian chỉ vẽ được một đường sức từ.
+  \item[(b)] Chiều của đường sức từ là chiều thuận đối với chiều dòng điện.
+  \item[(c)] Các đường sức từ là những đường cong khép kín hoặc dài vô hạn ở hai đầu.
+  \item[(d)] Quy ước vẽ sao cho mật độ đường sức tại mỗi điểm tỉ lệ với độ lớn cảm ứng từ tại điểm đó.
+\end{enumerate}
+
+\item \textit{Magnetic Flux.}\\
+\begin{definition}
+Từ thông qua một mặt $S$ là thông lượng của vector cảm ứng từ $\vec{B}$ qua mặt đó. Với mặt $S$ đã định hướng và phần tử diện tích $d\vec{S} = \vec{n}\,dS$,
+\[
+\Phi_m = \int_S \vec{B}\cdot\vec{n}\,dS = \int_S \vec{B}\cdot d\vec{S} \qquad (\text{đơn vị: Wb}).
+\]
+\end{definition}
+Từ thông qua mọi tiết diện của một ống đường sức là không đổi.
+
+\item \textit{Gauss's Law for Magnetism.}\\
+\begin{theorem}[Gauss]
+Từ thông qua một mặt kín $S$ bất kỳ luôn bằng 0:
+\[
+\oint_S \vec{B}\cdot d\vec{S} = 0.
+\]
+\end{theorem}
+\end{enumerate}
+
+\section{Magnetic Forces and Torques on Currents}
+\begin{enumerate}
+\item \textit{The Magnetic Force on a Current Element.}\\
+Lực từ tác dụng lên một phần tử dòng điện $I\,d\vec{l}$ đặt trong từ trường ngoài là
+\[
+d\vec{F} = I\,d\vec{l} \times \vec{B},
+\qquad
+dF = I\,dl\,B\sin(I\,d\vec{l},\vec{B}),
+\]
+với $\vec{B}$ là cảm ứng từ tại vị trí của $I\,d\vec{l}$. Phương của $d\vec{F}$ vuông góc với $I\,d\vec{l}$ và $\vec{B}$, chiều xác định theo quy tắc bàn tay trái. Để tính lực lên cả mạch $(C)$ ta chia mạch thành các phần tử rồi tích phân:
+\begin{align*}
+\vec{F} &= \left(\int_{(C)} I\,d\vec{l}\right) \times \vec{B} && (\text{từ trường đều}),\\
+\vec{F} &= \int_{(C)} I\,d\vec{l} \times \vec{B} && (\text{từ trường không đều}).
+\end{align*}
+
+\item \textit{A Rectangular Loop in a Uniform Field.}\\
+Xét khung dây hình chữ nhật $MNPQ$ không biến dạng ($MN = QP = a$, $NP = MQ = b$) mang dòng điện $I$, treo bằng sợi dây thẳng đứng qua khối tâm sao cho $MN$ thẳng đứng, $MQ$ nằm ngang. Khung đặt trong từ trường đều $\vec{B}$ nằm ngang.
+
+Hai cạnh nằm ngang $NP$ và $QM$ chịu hai lực trực đối:
+\[
+\vec{F}_3 = I\,\vec{NP} \times \vec{B},
+\qquad
+\vec{F}_4 = I\,\vec{QM} \times \vec{B} = -I\,\vec{MQ} \times \vec{B},
+\qquad
+\vec{F}_3 + \vec{F}_4 = \vec{0}.
+\]
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[scale=1.5, x={(-0.55cm,-0.42cm)}, y={(1cm,0cm)}, z={(0cm,1cm)},
+        vec/.style={-{Stealth}, thick, darkblue}]
+        \pgfmathsetmacro{\al}{35}
+        \pgfmathsetmacro{\cx}{1.3*cos(\al)}
+        \pgfmathsetmacro{\cy}{1.3*sin(\al)}
+        \coordinate (M) at (\cx,-\cy,0.9);
+        \coordinate (N) at (\cx,-\cy,-0.9);
+        \coordinate (P) at (-\cx,\cy,-0.9);
+        \coordinate (Q) at (-\cx,\cy,0.9);
+        \coordinate (A) at (\cx,-\cy,0);
+        \coordinate (B) at (-\cx,\cy,0);
+        % hệ trục
+        \draw[-{Stealth}] (0,0,0) -- (2.8,0,0) node[below left] {$x$};
+        \draw[-{Stealth}] (0,0,0) -- (0,3.8,0) node[right] {$y$};
+        \draw[-{Stealth}] (0,0,0) -- (0,0,2.2) node[above] {$z$};
+        \node[below left] at (0,0,0) {$O$};
+        % khung MNPQ
+        \fill[darkblue!10, opacity=0.8] (M) -- (N) -- (P) -- (Q) -- cycle;
+        \draw[thick] (M) -- (N) -- (P) -- (Q) -- cycle;
+        \draw[-{Stealth}, thick] ($(M)!0.4!(N)$) -- ($(M)!0.65!(N)$);
+        \draw[-{Stealth}, thick] ($(N)!0.4!(P)$) -- ($(N)!0.65!(P)$);
+        \draw[-{Stealth}, thick] ($(P)!0.4!(Q)$) -- ($(P)!0.65!(Q)$);
+        \draw[-{Stealth}, thick] ($(Q)!0.4!(M)$) -- ($(Q)!0.65!(M)$);
+        \node[above left] at (M) {$M$};
+        \node[below left] at (N) {$N$};
+        \node[below right] at (P) {$P$};
+        \node[above right] at (Q) {$Q$};
+        % vết của khung trong mặt phẳng xy và góc alpha
+        \draw[thin, dashed] (A) -- (B);
+        \fill (A) circle (1.2pt) node[below left] {$A$};
+        \fill (B) circle (1.2pt) node[above right] {$B$};
+        \draw[thin] plot[domain=-\al:0, samples=8, variable=\t]
+            ({0.9*cos(\t)},{0.9*sin(\t)},0);
+        \node at ({1.25*cos(-\al/2)},{1.25*sin(-\al/2)},0) {\small $\alpha$};
+        % từ trường B dọc Oy
+        \draw[vec] (0,1.4,1.5) -- (0,2.9,1.5);
+        \draw[vec] (0,1.4,-1.5) -- (0,2.9,-1.5) node[right] {$\vec{B}$};
+        % các lực
+        \draw[vec] (A) -- ++(1.2,0,0) node[below left] {$\vec{F}_1$};
+        \draw[vec] (B) -- ++(-1.2,0,0) node[above right] {$\vec{F}_2$};
+        \draw[vec] ($(N)!0.25!(P)$) -- ++(0,0,-0.9) node[below] {$\vec{F}_3$};
+        \draw[vec] ($(M)!0.25!(Q)$) -- ++(0,0,0.9) node[above] {$\vec{F}_4$};
+        % momen từ
+        \draw[vec] (0,0,0) -- ({1.7*sin(\al)},{1.7*cos(\al)},0)
+            node[above right] {$\vec{p}_m \equiv \vec{n}$};
+    \end{tikzpicture}
+\end{figure}
+Chọn hệ trục với $\vec{B} = (0, B, 0)$ và cạnh $MN$, $PQ$ song song $Oz$. Khi đó $\vec{MN} = (0,0,-a)$, $\vec{PQ} = (0,0,a)$ và
+\[
+\vec{F}_1 = I\,\vec{MN} \times \vec{B} =
+\begin{vmatrix}
+\hat{x} & \hat{y} & \hat{z}\\
+0 & 0 & -aI\\
+0 & B & 0
+\end{vmatrix}
+= IaB\,\hat{x},
+\qquad
+\vec{F}_2 = I\,\vec{PQ} \times \vec{B} = -IaB\,\hat{x}.
+\]
+Gọi $\alpha$ là góc giữa $Ox$ và mặt khung. Điểm đặt của hai lực là
+\[
+A\left(\tfrac{b}{2}\cos\alpha,\ -\tfrac{b}{2}\sin\alpha,\ 0\right),
+\qquad
+B\left(-\tfrac{b}{2}\cos\alpha,\ \tfrac{b}{2}\sin\alpha,\ 0\right).
+\]
+Hai lực $\vec{F}_1$, $\vec{F}_2$ tạo thành một ngẫu lực có momen
+\begin{align*}
+\vec{M} &= \vec{OA} \times \vec{F}_1 + \vec{OB} \times \vec{F}_2\\
+&= \left(0,0,\tfrac{IaBb}{2}\sin\alpha\right) + \left(0,0,\tfrac{IaBb}{2}\sin\alpha\right)
+= (0,\ 0,\ IabB\sin\alpha).
+\end{align*}
+
+\item \textit{Magnetic Dipole Moment.}\\
+Đại lượng $p_m = Iab = IS$ gọi là \textbf{momen từ} của khung dây. Định nghĩa vector momen từ $\vec{p}_m$ nằm theo pháp tuyến dương $\vec{n}$ của khung (chiều thuận với chiều dòng điện):
+\[
+\vec{p}_m = (p_m\sin\alpha,\ p_m\cos\alpha,\ 0).
+\]
+Khi đó
+\[
+\vec{p}_m \times \vec{B} =
+\begin{vmatrix}
+\hat{x} & \hat{y} & \hat{z}\\
+p_m\sin\alpha & p_m\cos\alpha & 0\\
+0 & B & 0
+\end{vmatrix}
+= B p_m\sin\alpha\,\hat{z},
+\]
+tức là
+\[
+\boxed{\vec{M} = \vec{p}_m \times \vec{B}}.
+\]
+Người ta chứng minh được kết quả này đúng cho khung dây có hình dạng bất kỳ.
+\begin{remark}
+Dưới tác dụng của ngẫu lực $\vec{M}$ (không có lực nào khác), khung sẽ quay đến vị trí $\vec{p}_m \uparrow\uparrow \vec{B}$, tức mặt khung vuông góc với đường sức từ. Nếu ban đầu khung đã ở vị trí đó thì nó nằm cân bằng bền.
+\end{remark}
+\end{enumerate}
+
+\section{Work Done by Magnetic Forces}
+\begin{enumerate}
+\item \textit{Maxwell's Theorem.}\\
+Xét một mạch điện $(C)$ không biến dạng (kín hoặc hở) mang dòng điện $I$, chuyển động trong từ trường ngoài $\vec{B}$. Một phần tử $I\,d\vec{l}$ chịu lực $d\vec{F} = I\,d\vec{l} \times \vec{B}$; công của lực này trong chuyển dời $d\vec{x}$ là
+\[
+d^2A = d\vec{F}\cdot d\vec{x} = (I\,d\vec{l} \times \vec{B})\cdot d\vec{x}.
+\]
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[vec/.style={-{Stealth}, thick, darkblue}]
+        % mạch (C) và vị trí sau khi dịch chuyển dx
+        \draw[semithick] (0,0) .. controls (1,0.6) and (3,0.6) .. (4,0);
+        \draw[semithick, dashed] (0,1) .. controls (1,1.6) and (3,1.6) .. (4,1);
+        \draw[-{Stealth}, semithick] (3.2,0.43) -- (3.6,0.3);
+        % diện tích quét
+        \fill[darkblue!15] (1.55,0.43) rectangle (2.45,1.43);
+        \draw[thin, dashed] (1.55,0.43) -- (1.55,1.43);
+        \draw[thin, dashed] (2.45,0.43) -- (2.45,1.43);
+        \draw[vec] (1.55,0.43) -- (2.45,0.43) node[midway, below] {$d\vec{l}$};
+        \draw[vec] (1.55,0.43) -- (1.55,1.43) node[midway, left] {$d\vec{x}$};
+        \draw[thick, darkblue] (2.0,0.93) circle (0.15);
+        \fill[darkblue] (2.0,0.93) circle (0.035);
+        \node[right] at (2.7,0.93) {$d\vec{S} = d\vec{l} \times d\vec{x}$};
+        \node[below] at (0.3,-0.1) {$(C)$};
+        \node[below] at (3.6,0.2) {$I$};
+    \end{tikzpicture}
+\end{figure}
+Theo tính chất của tích hỗn hợp, $(d\vec{l} \times \vec{B})\cdot d\vec{x} = (d\vec{l} \times d\vec{x})\cdot\vec{B}$. Vector $d\vec{S} = d\vec{l} \times d\vec{x}$ là vector diện tích mà $d\vec{l}$ \textbf{quét} được trong chuyển dời. Do đó
+\[
+d^2A = I\,\vec{B}\cdot d\vec{S} = I\,d^2\Phi_m,
+\]
+với $d^2\Phi_m$ là từ thông quét bởi $d\vec{l}$. Tích phân trên toàn mạch ta được
+\[
+dA = I\,d\Phi_m.
+\]
+\begin{theorem}[Maxwell]
+Công của các lực từ tác dụng lên một mạch điện chuyển dời trong từ trường bằng tích của cường độ dòng điện với từ thông quét bởi mạch trong quá trình chuyển dời.
+\end{theorem}
+
+\item \textit{Work on a Closed Circuit.}\\
+Xét mạch kín $(C)$ mang dòng $I$; quy ước mọi mặt tựa trên $(C)$ đều được định hướng theo chiều của $I$. Giả sử mạch dịch chuyển từ vị trí 1 sang vị trí 2 và quét mặt $S$ với từ thông quét $\overline{\Phi}_m$; khi đó $A = I\,\overline{\Phi}_m$.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[x={(-0.5cm,-0.4cm)}, y={(1cm,0cm)}, z={(0cm,1cm)},
+        vec/.style={-{Stealth}, thick, darkblue}]
+        % mặt quét S: các đường sinh và hai đường bao
+        \foreach \t in {0,60,...,300}{
+            \draw[thin, darkblue!45] ({1.2*cos(\t)},0,{1.2*sin(\t)}) -- ({1.2*cos(\t)},3.4,{1.2*sin(\t)});
+        }
+        \draw[semithick, darkblue] ({1.2*(-0.371)},0,{1.2*0.928}) -- ({1.2*(-0.371)},3.4,{1.2*0.928});
+        \draw[semithick, darkblue] ({-1.2*(-0.371)},0,{-1.2*0.928}) -- ({-1.2*(-0.371)},3.4,{-1.2*0.928});
+        % vị trí 1 và vị trí 2
+        \foreach \yy in {0,3.4}{
+            \draw[thick, darkblue, fill=darkblue!12, fill opacity=0.6] plot[domain=0:360, samples=72, variable=\t]
+                ({1.2*cos(\t)},\yy,{1.2*sin(\t)}) -- cycle;
+            \draw[-{Stealth}, thick] ({1.2*cos(200)},\yy,{1.2*sin(200)}) -- ({1.2*cos(212)},\yy,{1.2*sin(212)});
+        }
+        % pháp tuyến n_1, n_2 định hướng theo chiều I
+        \draw[vec] (0,0,0) -- (0,-1.6,0) node[left] {$\vec{n}_1$};
+        \draw[vec] (0,3.4,0) -- (0,1.8,0) node[midway, above] {$\vec{n}_2$};
+        \node at (0.55,0,-0.55) {$S_1$};
+        \node at (0.55,3.4,-0.55) {$S_2$};
+        \node[above] at (0,1.7,1.35) {$S$};
+        \node[above] at (0,0,1.5) {vị trí 1};
+        \node[above] at (0,3.4,1.5) {vị trí 2};
+        \node[below left] at ({1.2*cos(235)},0,{1.2*sin(235)}) {$(C)$};
+    \end{tikzpicture}
+\end{figure}
+Lấy hai mặt $S_1$, $S_2$ tựa trên $(C)$ ở hai vị trí, có pháp tuyến $\vec{n}_1$, $\vec{n}_2$ định hướng theo chiều $I$; từ thông qua chúng là $\Phi_{m1}$, $\Phi_{m2}$. Ba mặt $S_1$, $S$, $S_2$ tạo thành một mặt kín, nên theo định lý Gauss tổng từ thông ra khỏi mặt kín này bằng 0. Khi lấy pháp tuyến hướng ra ngoài thì ở $S_1$ có $\vec{n}_1 \uparrow\uparrow d\vec{S}$, còn ở $S_2$ có $\vec{n}_2 \uparrow\downarrow d\vec{S}$, nên
+\[
+\Phi_{m1} + \overline{\Phi}_m - \Phi_{m2} = 0
+\quad\Rightarrow\quad
+\overline{\Phi}_m = \Phi_{m2} - \Phi_{m1}.
+\]
+Vậy
+\[
+\boxed{A = I\left(\Phi_{m2} - \Phi_{m1}\right)}:
+\]
+công của lực từ lên mạch kín bằng tích của cường độ dòng điện với độ biến thiên từ thông qua mạch.
+
+\begin{remark}
+Kết quả này không mâu thuẫn với nhận xét ``lực từ không sinh công'' ở đầu chương. Lực Lorentz $q\vec{v} \times \vec{B}$ tác dụng lên từng điện tích luôn vuông góc với vận tốc toàn phần của nó nên không sinh công. Khi dây dẫn chuyển động, lực từ chỉ ``chuyển hướng'' năng lượng: công $I\,d\Phi_m$ thực hiện lên dây được bù đúng bằng công mà nguồn điện phải cung cấp để duy trì dòng $I$ chống lại suất điện động cảm ứng xuất hiện trong mạch (xem phần cảm ứng điện từ bên dưới). Đây chính là câu trả lời cho câu hỏi ``cái gì đã thực hiện công?''.
+\end{remark}
+
+\item \textit{Principle of Maximum Flux.}\\
+Nếu các lực từ sinh công dương ($A > 0$) thì $\Phi_{m2} > \Phi_{m1}$, nghĩa là từ thông qua mạch tăng lên. Vậy:
+\begin{center}
+\textit{Khi một mạch kín đặt trong từ trường ngoài, lực từ luôn làm mạch dịch chuyển sao cho từ thông (theo chiều dương) qua mạch tăng lên.}
+\end{center}
+\end{enumerate}
+
+\section{Electromagnetic Induction}
+\begin{enumerate}
+\item \textit{Lenz's Law.}\\
+\textbf{Phát biểu 1.} Khi số đường sức từ qua mạch kín $(C)$ tăng, dòng điện cảm ứng có chiều sao cho từ trường do nó gây ra có đường sức ngược chiều với từ trường ban đầu; khi số đường sức giảm, từ trường cảm ứng cùng chiều với từ trường ban đầu.
+
+Khi tính từ thông $\Phi_m$ qua $(C)$, tức qua một mặt $(S)$ tựa trên $(C)$, ta chọn một chiều dương trên $(C)$ và định hướng $(S)$ sao cho pháp tuyến dương của $(S)$ có chiều thuận với chiều dương trên $(C)$. Với quy ước đó:
+
+\textbf{Phát biểu 2.} Khi $\Phi_m$ qua $(C)$ tăng thì dòng điện cảm ứng chạy theo chiều âm trên $(C)$; khi $\Phi_m$ giảm thì dòng điện cảm ứng chạy theo chiều dương.
+
+\textbf{Phát biểu 3.} Khi sự biến thiên từ thông qua $(C)$ gây ra bởi một dịch chuyển nào đó thì dòng điện cảm ứng có chiều sao cho từ trường do nó gây ra chống lại sự dịch chuyển ấy.
+
+Tổng quát: \textit{dòng điện cảm ứng có chiều sao cho từ trường do nó gây ra chống lại nguyên nhân sinh ra nó.}
+
+\item \textit{Faraday's Law.}\\
+Xét mạch kín $(C)$ trong từ trường; trong khoảng thời gian $dt$ từ thông qua $(C)$ biến thiên một lượng $d\Phi_m$ và trong mạch xuất hiện dòng cảm ứng $i$. Công của lực từ lên mạch là $dA = i\,d\Phi_m$. Theo định luật Lenz đây là công cản, nên bên ngoài phải cung cấp cho $(C)$ năng lượng
+\[
+dA' = -dA = -i\,d\Phi_m.
+\]
+Chẳng hạn muốn thay đổi từ thông bằng cách dịch chuyển $(C)$ thì phải tác dụng ngoại lực, và ngoại lực sinh công $dA'$ chống lại công cản của lực từ. Sự xuất hiện dòng $i$ tương đương với sự tồn tại một nguồn có suất điện động $\ep$ trong mạch; năng lượng $dA'$ chuyển thành năng lượng do nguồn này phát ra: $dA' = \ep\,i\,dt$. Do đó $\ep\,i\,dt = -i\,d\Phi_m$, hay
+\begin{equation}\label{eq:faraday}
+\ep = -\frac{d\Phi_m}{dt}.
+\end{equation}
+Ở đây $\ep$ và $\Phi_m$ là các đại lượng đại số: chọn chiều dương trên $(C)$, $\Phi_m$ tính với pháp tuyến dương thuận theo chiều đó, còn chiều của $\ep$ là chiều của dòng cảm ứng (đi qua nguồn tương đương từ cực âm sang cực dương). Khi $\ep > 0$ suất điện động có chiều dương, khi $\ep < 0$ nó có chiều âm trên $(C)$.
+
+\item \textit{Motional EMF.}\\
+Xét mạch kín $(C)$ chuyển động trong từ trường dừng. Trong thời gian $dt$ mạch dịch chuyển từ vị trí $(C_1)$ sang $(C_2)$, từ thông qua mạch đổi từ $\Phi_1 = \Phi$ (qua $S_1$) sang $\Phi_2 = \Phi + d\Phi$ (qua $S_2$).
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[x={(-0.5cm,-0.4cm)}, y={(1cm,0cm)}, z={(0cm,1cm)},
+        vec/.style={-{Stealth}, thick, darkblue}]
+        % mặt quét S_quét
+        \foreach \t in {0,60,...,300}{
+            \draw[thin, darkblue!45] ({1.2*cos(\t)},0,{1.2*sin(\t)}) -- ({1.2*cos(\t)},2.4,{1.2*sin(\t)});
+        }
+        \draw[semithick, darkblue] ({1.2*(-0.371)},0,{1.2*0.928}) -- ({1.2*(-0.371)},2.4,{1.2*0.928});
+        \draw[semithick, darkblue] ({-1.2*(-0.371)},0,{-1.2*0.928}) -- ({-1.2*(-0.371)},2.4,{-1.2*0.928});
+        % (C_1) và (C_2)
+        \foreach \yy in {0,2.4}{
+            \draw[thick, darkblue, fill=darkblue!12, fill opacity=0.6] plot[domain=0:360, samples=72, variable=\t]
+                ({1.2*cos(\t)},\yy,{1.2*sin(\t)}) -- cycle;
+            \draw[-{Stealth}, thick] ({1.2*cos(200)},\yy,{1.2*sin(200)}) -- ({1.2*cos(212)},\yy,{1.2*sin(212)});
+        }
+        % dịch chuyển dx
+        \draw[vec] (0,0,-1.9) -- (0,2.4,-1.9) node[midway, below] {$d\vec{x}$};
+        \draw[thin, dashed] (0,0,-1.2) -- (0,0,-1.9);
+        \draw[thin, dashed] (0,2.4,-1.2) -- (0,2.4,-1.9);
+        \node at (0.55,0,-0.55) {$S_1$};
+        \node at (0.55,2.4,-0.55) {$S_2$};
+        \node[above] at (0,1.2,1.35) {$S_{\text{quét}}$};
+        \node[above] at (0,0,1.5) {$(C_1)$};
+        \node[above] at (0,2.4,1.5) {$(C_2)$};
+    \end{tikzpicture}
+\end{figure}
+Mặt kín tạo bởi $S_1$, $S_2$ và mặt $S_{\text{quét}}$ cho
+\[
+\Phi_1 + d\Phi_{\text{quét}} - \Phi_2 = 0
+\quad\Rightarrow\quad
+d\Phi_{\text{quét}} = d\Phi
+\quad\Rightarrow\quad
+\ep = -\frac{d\Phi}{dt} = -\frac{d\Phi_{\text{quét}}}{dt}.
+\]
+\textit{Suất điện động cảm ứng trong mạch có độ lớn bằng từ thông quét bởi mạch trong một đơn vị thời gian.} Phát biểu này đúng cho cả mạch kín lẫn mạch hở.
+
+Với mạch hở (một đoạn dây dẫn), có thể không có dòng điện nhưng suất điện động vẫn tồn tại và tạo ra hiệu điện thế $U = \ep$ giữa hai đầu dây. Xét đoạn $d\vec{l}$ dịch chuyển $d\vec{x}$; diện tích quét và từ thông quét là
+\[
+d\vec{S}_{\text{quét}} = d\vec{x} \times d\vec{l},
+\qquad
+d\Phi_{\text{quét}} = \vec{B}\cdot(d\vec{x} \times d\vec{l}) = -d\vec{l}\cdot(d\vec{x} \times \vec{B}).
+\]
+Suy ra
+\[
+d\ep = -\frac{d\Phi_{\text{quét}}}{dt} = d\vec{l}\cdot\left(\frac{d\vec{x}}{dt} \times \vec{B}\right) = d\vec{l}\cdot(\vec{v} \times \vec{B}),
+\qquad
+\ep = \int_{(C)} (\vec{v} \times \vec{B})\cdot d\vec{l}.
+\]
+Khi $\vec{v}$, $\vec{B}$, $d\vec{l}$ đôi một vuông góc thì $d\ep = B\,v\,dl$. Vector
+\[
+\vec{E}^{*} = \vec{v} \times \vec{B}
+\]
+có vai trò như một điện trường bên trong dây dẫn, gọi là \textbf{điện trường lạ}; chính nó tạo ra suất điện động trong mạch.
+\end{enumerate}
+
+\section{Self-Inductance}
+\begin{enumerate}
+\item \textit{Inductance.}\\
+Dòng điện $i$ trong mạch kín $(C)$ sinh ra một từ trường; từ thông qua chính $(C)$ do từ trường này gây ra gọi là \textbf{từ thông tự cảm}. Vì cảm ứng từ tỉ lệ với $i$ nên
+\[
+\Phi_{\text{tc}} = L\,i
+\quad\Rightarrow\quad
+L = \frac{\Phi_{\text{tc}}}{i},
+\]
+với $L$ là \textbf{độ tự cảm} của mạch (thường chọn chiều dương trên $(C)$ là chiều dòng điện). Đơn vị của $L$ là henry: $1\ \text{H} = 1\ \text{Wb/A}$. Với ống dây dài có $N$ vòng, tiết diện $S$, chiều dài $l$:
+\[
+L = \mu\mu_0\,\frac{N^2 S}{l}.
+\]
+
+\item \textit{Self-Induced EMF.}\\
+Khi $i$ biến thiên thì $\Phi_{\text{tc}}$ biến thiên, trong mạch xuất hiện suất điện động tự cảm
+\[
+\ep_{\text{tc}} = -\frac{d\Phi_{\text{tc}}}{dt} = -L\,\frac{di}{dt}.
+\]
+Hiện tượng tự cảm xảy ra trong mạch một chiều khi đóng hoặc ngắt mạch, và thường xuyên xảy ra trong mạch xoay chiều. Theo định luật Lenz, suất điện động tự cảm luôn chống lại sự biến thiên của dòng điện.
+
+\item \textit{Energy Stored in an Inductor.}\\
+Xét mạch gồm nguồn $(\ep_0, r)$, cuộn cảm $L$ (điện trở bằng 0) và điện trở $R$, khóa $K$ chuyển được giữa vị trí $a$ (nối nguồn) và $b$ (nối $R$).
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[semithick]
+        % dây dẫn
+        \draw (0,0) -- (6,0);
+        \draw (0,0) -- (0,1.25);
+        \draw (0,1.75) -- (0,3) -- (1.8,3);
+        \draw (3,3.6) -- (3,2.4);
+        \draw (4.2,3) -- (6,3) -- (6,2.1);
+        \draw (6,0.9) -- (6,0);
+        \draw (3,0.6) -- (3,0);
+        % nguồn (E_0, r)
+        \draw (-0.3,1.25) -- (0.3,1.25);
+        \draw (-0.15,1.75) -- (0.15,1.75);
+        \node[left] at (-0.35,1.5) {$(\ep_0, r)$};
+        % cuộn cảm L
+        \foreach \k in {0,1,2,3}{
+            \draw (3,{2.4-0.45*\k}) arc[start angle=90, end angle=-90, x radius=0.25, y radius=0.225];
+        }
+        \node[left] at (2.7,1.5) {$L$};
+        % điện trở R
+        \draw (5.8,2.1) rectangle (6.2,0.9);
+        \node[right] at (6.3,1.5) {$R$};
+        % khóa K
+        \draw[thick] (3,3.6) -- (1.8,3);
+        \fill (1.8,3) circle (1.5pt) node[below] {$a$};
+        \fill (4.2,3) circle (1.5pt) node[below] {$b$};
+        \fill (3,3.6) circle (1.5pt) node[above right] {$D$};
+        \fill (3,0) circle (1.5pt) node[below] {$B$};
+        \node[above left] at (2.4,3.3) {$K$};
+    \end{tikzpicture}
+\end{figure}
+
+\textbf{(a) Đóng khóa vào $a$.} Dòng điện tăng từ 0, trong mạch xuất hiện $\ep = -L\,\dfrac{di}{dt}$. Theo định luật Kirchhoff II:
+\begin{equation}\label{eq:rl-charge}
+\ep_0 - L\frac{di}{dt} = r\,i
+\quad\Leftrightarrow\quad
+\ep_0 = L\frac{di}{dt} + r\,i.
+\end{equation}
+Nhân hai vế với $i\,dt$:
+\[
+\ep_0\,i\,dt = r\,i^2\,dt + L\,i\,di.
+\]
+Đây là định luật bảo toàn năng lượng cho mạch: năng lượng nguồn sinh ra trong $dt$ ($\ep_0 i\,dt$) bằng nhiệt Joule tỏa ra trên $r$ ($r i^2 dt$) cộng với năng lượng tích lũy trong cuộn cảm $dW_m = L\,i\,di$. Từ $0$ đến khi dòng đạt $i$:
+\[
+\boxed{W_m = \int_0^i L\,i\,di = \frac12 L i^2}.
+\]
+
+\textbf{(b) Dòng điện theo thời gian.} Viết lại \cref{eq:rl-charge}:
+\[
+\frac{di}{dt} = -\frac{r}{L}\left(i - \frac{\ep_0}{r}\right)
+\quad\Rightarrow\quad
+\frac{d\left(i - \frac{\ep_0}{r}\right)}{i - \frac{\ep_0}{r}} = -\frac{r}{L}\,dt
+\quad\Rightarrow\quad
+i - \frac{\ep_0}{r} = C\,e^{-\frac{r}{L}t}.
+\]
+Với điều kiện ban đầu $i(0) = 0$ ta được $C = -\dfrac{\ep_0}{r}$, do đó
+\[
+i = \frac{\ep_0}{r}\left(1 - e^{-\frac{r}{L}t}\right) = I\left(1 - e^{-t/\tau}\right),
+\qquad
+I = \frac{\ep_0}{r},\quad \tau = \frac{L}{r}.
+\]
+$\tau$ là \textbf{hằng số thời gian} của mạch. Khi $t = 10\tau$ thì $e^{-10} \ll 1$ và $i \simeq I$: dòng điện đã chuyển từ giai đoạn quá độ sang giai đoạn ổn định. Ví dụ với $r = 1\ \Omega$, $L = 10^{-3}\ \text{H}$ thì $\tau = 10^{-3}\ \text{s}$, rất nhỏ.
+
+\textbf{(c) Chuyển khóa sang $b$ (cuộn cảm phóng điện).} Thực nghiệm cho thấy điện trở $R$ nóng lên, tức có dòng điện chạy qua $R$. Gọi $t = 0$ là lúc chuyển khóa; dòng $i$ giảm dần nên trong cuộn cảm xuất hiện $\ep = -L\,\dfrac{di}{dt}$, và theo định luật Ohm
+\[
+U_{DB} = -L\frac{di}{dt} = R\,i
+\quad\Rightarrow\quad
+-L\,i\,di = R\,i^2\,dt
+\quad\Leftrightarrow\quad
+-d\left(\tfrac12 L i^2\right) = R\,i^2\,dt.
+\]
+Vế trái là độ giảm năng lượng từ trong cuộn cảm, vế phải là nhiệt Joule tỏa ra trên $R$ trong $dt$. Tích phân $\dfrac{di}{i} = -\dfrac{R}{L}\,dt$ với $i(0) = I$:
+\[
+i = I\,e^{-\frac{R}{L}t}.
+\]
+Khi $t \to +\infty$ thì $i \to 0$; thực tế sau vài lần hằng số thời gian 

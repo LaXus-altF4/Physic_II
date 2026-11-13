@@ -1,0 +1,16 @@
+# File sinh ra khi biên dịch LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.xdv
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# PDF xuất ra (đăng qua Releases)
+Physics_II.pdf
+
+# Tài liệu có bản quyền / không liên quan
+David Griffiths Electrodynamics.pdf
+temporary_log.md
