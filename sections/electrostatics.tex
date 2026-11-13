@@ -1,6 +1,31 @@
 \chapter{Electrostatics}
 \section{The electric field}
+% [ADDED BY CLAUDE]
+\begin{enumerate}
+\item \textit{Coulomb's Law.}\\
+Lực tương tác giữa hai điện tích điểm $q$ và $q_0$ đứng yên, cách nhau một khoảng $r$ trong chân không là
+\[
+\vec{F} = \frac{1}{4\pi\ep_0}\,\frac{q\,q_0}{r^2}\,\hat{r},
+\]
+trong đó $\hat{r}$ là vector đơn vị hướng từ $q$ tới $q_0$ và $\ep_0 \approx 8{,}85\cdot 10^{-12}\ \text{C}^2/(\text{N}\cdot\text{m}^2)$ là hằng số điện. Hai điện tích cùng dấu thì đẩy nhau, trái dấu thì hút nhau. Về sau ta đặt $k = \dfrac{1}{4\pi\ep_0}$ cho gọn.
 
+\item \textit{The Electric Field.}\\
+Lực trên phụ thuộc vào cả $q$ và $q_0$. Tách phần chỉ phụ thuộc vào $q$ và vị trí đặt $q_0$ ta được \textbf{vector cường độ điện trường}
+\[
+\vec{E} = \frac{\vec{F}}{q_0} = \frac{1}{4\pi\ep_0}\,\frac{q}{r^2}\,\hat{r},
+\]
+đơn vị là N/C hay V/m. $\vec{E}$ đặc trưng cho điện trường do $q$ gây ra, không phụ thuộc vào điện tích thử $q_0$.
+
+\item \textit{Superposition Principle.}\\
+Điện trường do nhiều điện tích gây ra tại một điểm bằng tổng các điện trường do từng điện tích gây ra tại điểm đó. Với các điện tích điểm $q_i$ và với phân bố liên tục ta có lần lượt
+\[
+\vec{E} = \sum_i \frac{1}{4\pi\ep_0}\,\frac{q_i}{r_i^2}\,\hat{r}_i,
+\qquad
+\vec{E} = \frac{1}{4\pi\ep_0}\int \frac{\hat{r}}{r^2}\,dq,
+\]
+với $dq = \lambda\,dl$ (điện tích phân bố trên đường), $dq = \sigma\,da$ (trên mặt) hoặc $dq = \rho\,d\tau$ (trong khối).
+\end{enumerate}
+% [ADDED BY CLAUDE]
 
 \section{Example}
 \begin{problem}
@@ -28,6 +53,18 @@ E_{z} &= 2\int_{0}^{L} dE_{z}\\
       &= \frac{2}{4\pi\ep_{0}}\int_{0}^{L} \frac{\lambda\,dx}{z^2+x^2}\cdot\frac{z}{\sqrt{z^2+x^2}}\\
       &= \frac{\lambda z}{2\pi\ep_{0}}\int_{0}^{L} \frac{dx}{(z^2+x^2)^{3/2}}
 \end{align*}
+% [ADDED BY CLAUDE]
+Đặt $x = z\tan\beta$ thì $dx = \dfrac{z\,d\beta}{\cos^2\beta}$ và $(z^2+x^2)^{3/2} = \dfrac{z^3}{\cos^3\beta}$, nên
+\[
+\int_{0}^{L}\frac{dx}{(z^2+x^2)^{3/2}} = \frac{1}{z^2}\int_{0}^{\beta_0}\cos\beta\,d\beta = \frac{\sin\beta_0}{z^2} = \frac{L}{z^2\sqrt{z^2+L^2}},
+\qquad \tan\beta_0 = \frac{L}{z}.
+\]
+Vậy
+\[
+\boxed{\vec{E} = \frac{\lambda L}{2\pi\ep_{0}\,z\sqrt{z^2+L^2}}\,\hat{z}}
+\]
+Kiểm tra giới hạn: khi $L \gg z$ ta có $\sqrt{z^2+L^2}\approx L$ và $E \to \dfrac{\lambda}{2\pi\ep_{0}z}$, đúng bằng điện trường của dây thẳng dài vô hạn; khi $z \gg L$ ta có $E \to \dfrac{\lambda L}{2\pi\ep_{0}z^2} = \dfrac{Q}{4\pi\ep_{0}z^2}$ với $Q = 2\lambda L$ là tổng điện tích của đoạn dây, đúng bằng điện trường của một điện tích điểm. Thứ nguyên của $E$ là $\dfrac{\text{C}}{\text{C}^2/(\text{N}\cdot\text{m}^2)\cdot\text{m}^2} = \text{N/C}$.
+% [ADDED BY CLAUDE]
 
 \end{sol}
 
@@ -244,10 +281,17 @@ vậy,
 Việc chọn mặt Gauss rất quan trọng vì nếu ta không chọn được mặt thì hợp thì $\vec{E}$ sẽ không thể là hằng số vì không có tính đối xứng. Thông thường mặt Gauss được chọn sẽ là mặt có các tính đối xứng sau.
 \begin{enumerate}[label={}]
 \item{Spherical symmetry:} đối xứng cầu theo đó mặt được chọn để bao vật sẽ là mặt cầu.
-\item
+% [ADDED BY CLAUDE]
+\item \textit{Ví dụ:} mặt cầu hoặc khối cầu tích điện đều, mặt Gauss là mặt cầu đồng tâm; $E$ chỉ phụ thuộc vào $r$ và hướng theo $\hat{r}$.
+% [ADDED BY CLAUDE]
 \item{Cylindrical symmetry:} đối xứng trụ theo đó mặt được chọn để bao vật sẽ là mặt trụ.
-\item
+% [ADDED BY CLAUDE]
+\item \textit{Ví dụ:} dây thẳng dài hoặc khối trụ dài tích điện, mặt Gauss là mặt trụ đồng trục; $E$ chỉ phụ thuộc vào khoảng cách $s$ tới trục và hướng theo $\hat{s}$.
+% [ADDED BY CLAUDE]
 \item{Plane symmetry:} đối xứng mặt theo đó mặt được chọn để bao vật sẽ là các mặt của hình hộp.
+% [ADDED BY CLAUDE]
+\item \textit{Ví dụ:} mặt phẳng lớn tích điện đều, mặt Gauss là hình hộp có hai nắp song song với mặt phẳng; $E$ vuông góc với mặt phẳng.
+% [ADDED BY CLAUDE]
 \end{enumerate}
 Đặc biệt đối với \textbf{đối xứng trụ} và \textbf{đối xứng mặt} ta chỉ nên áp dụng khi đề bài cho khối trụ dài vô hạn hoặc mặt phẳng được mở rộng về mọi hướng. Điều này tương đương với dữ kiện "khối trụ dài" hay "mặt phẳng lớn" trong đề bài.
 
@@ -575,6 +619,9 @@ Vậy,
 \[
 \boxed{\vec{E} = -\frac{2k\lambda \sin{\frac{\alpha}{2}}}{R}\,\hat{j}}
 \]
+% [ADDED BY CLAUDE]
+\textbf{Nhận xét.} Khi $\alpha$ nhỏ thì $\sin\frac{\alpha}{2} \approx \frac{\alpha}{2}$ nên $E \approx \dfrac{k\lambda\alpha}{R} = \dfrac{kq}{R^2}$ với $q = \lambda R\alpha$ là điện tích của cung: cung rất nhỏ cho điện trường giống như một điện tích điểm $q$ đặt tại cung. Ngược lại khi $\alpha = 2\pi$ (vòng tròn kín) ta có $\sin\pi = 0$ nên $E = 0$ tại tâm, phù hợp với tính đối xứng của vòng tròn.
+% [ADDED BY CLAUDE]
 \end{sol}
 
 \begin{problem}

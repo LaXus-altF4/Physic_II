@@ -283,6 +283,25 @@ Ta xét một ví dụ thú vị sau.
 \begin{example}
 Xét một khung dây hình vuông có chiều dài cạnh là $a$ khối lượng là $m$, một cạnh của khung dây được đặt trong từ trường đều $\vec{B}$ hướng vào mặt giấy. Khung dây được nối với nguồn điện một chiều, hãy tìm cường độ dòng điện $I$.
 \end{example}
+% [ADDED BY CLAUDE]
+\begin{sol}
+Giả sử khung treo thẳng đứng, chỉ có cạnh dưới (chiều dài $a$) nằm trong từ trường $\vec{B}$ hướng vào mặt giấy, các cạnh còn lại nằm ngoài vùng từ trường. Chọn $\hat{x}$ nằm ngang sang phải, $\hat{y}$ thẳng đứng hướng lên, $\hat{z}$ hướng ra khỏi mặt giấy, khi đó $\vec{B} = -B\hat{z}$.
+
+Để lực từ hướng lên, dòng điện trong cạnh dưới phải chạy sang phải, tức $I\,\vec{l} = Ia\,\hat{x}$. Lực từ lên cạnh dưới là
+\[
+\vec{F}_{\text{mag}} = Ia\,\hat{x} \times (-B\hat{z}) = IaB\,\hat{y},
+\]
+vì $\hat{x} \times \hat{z} = -\hat{y}$. Khung đứng cân bằng khi lực từ cân bằng với trọng lực $m\vec{g} = -mg\,\hat{y}$:
+\[
+IaB = mg
+\quad\Rightarrow\quad
+\boxed{I = \frac{mg}{aB}}
+\]
+và dòng điện chạy ngược chiều kim đồng hồ. Thứ nguyên: $[IaB] = \text{A}\cdot\text{m}\cdot\text{T} = \text{N}$, đúng là một lực.
+
+Nếu $I > \dfrac{mg}{aB}$ thì khung bị kéo lên. Khi đó công nâng khung là do nguồn điện cung cấp, lực từ chỉ chuyển hướng năng lượng như đã nói ở phần công của lực từ.
+\end{sol}
+% [ADDED BY CLAUDE]
 \end{enumerate}
 
 \begin{problem}
@@ -305,6 +324,27 @@ Thay vào công thức trên ta được:
 \[\vec{B} = \frac{\mu_0 \mu}{4\pi}\int_0^{2\pi} \frac{2IR}{r_{o}} \, d\phi\]
 Mà $r_{o}^2 = r^2 + R^2 -2 rR\cos\phi$, nên:
 \[\vec{B} = \frac{\mu_0 \mu}{4\pi}\int_0^{2\pi} \frac{2IR}{\sqrt{r^2 + R^2 - 2 rR\cos\phi}} \, d\phi\]
+% [ADDED BY CLAUDE]
+\textbf{Nhận xét.} Tích phân trên chỉ cộng \textit{độ lớn} của các $d\vec{B}$, trong khi các phần tử khác nhau của mặt trụ cho $d\vec{B}$ có phương khác nhau, nên nó không cho trực tiếp độ lớn của $\vec{B}$. Để hoàn thành bài toán ta dùng định luật Ampère (trình bày ở phần sau của chương) và tính đối xứng trụ.
+
+Do đối xứng trụ, $\vec{H}$ chỉ có thành phần theo $\hat{\varphi}$ và độ lớn $H$ chỉ phụ thuộc vào $r$. Lấy $(C)$ là đường tròn bán kính $r$ nằm trong mặt phẳng vuông góc với trục, tâm trên trục, chiều dương thuận với chiều dòng điện. Khi đó
+\[
+\oint_{(C)} \vec{H}\cdot d\vec{l} = H\cdot 2\pi r = \sum_k \ep_k I_k.
+\]
+\begin{itemize}
+  \item Với $r < R$: dòng điện chỉ chạy trên mặt trụ bán kính $R$ nên $(C)$ không bao dòng điện nào, $\sum I_k = 0$, suy ra $H = 0$ và $B = 0$.
+  \item Với $r > R$: $(C)$ bao toàn bộ dòng điện, $\sum I_k = I$, suy ra $H = \dfrac{I}{2\pi r}$ và $B = \mu\mu_0 H$.
+\end{itemize}
+Vậy
+\[
+\boxed{B(r) =
+\begin{cases}
+0, & r < R,\\[6pt]
+\dfrac{\mu_0\mu I}{2\pi r}, & r > R.
+\end{cases}}
+\]
+Kiểm tra: khi $r \to \infty$ thì $B \to 0$; với $r > R$ kết quả trùng với từ trường của dây thẳng dài vô hạn mang dòng $I$ đặt trên trục. Tại $r = R$ cảm ứng từ \textbf{gián đoạn}: nhảy từ $0$ lên $\dfrac{\mu_0\mu I}{2\pi R}$. Đó là vì dòng điện chạy trên mặt trụ, có mật độ dòng mặt $K = \dfrac{I}{2\pi R}$, và độ nhảy của $B$ bằng $\mu_0\mu K$ (nếu dòng điện phân bố đều trong thể tích thì $B$ liên tục).
+% [ADDED BY CLAUDE]
 \end{sol}
 
 \begin{problem}
@@ -354,6 +394,44 @@ Dòng điện cường độ $I$ chạy trong dây dẫn thẳng dài vô hạn.
     \includegraphics[width=0.6\textwidth]{magnetostatics_problem3.png}
     \label{fig:problem3}
 \end{figure}
+% [ADDED BY CLAUDE]
+\begin{sol}
+Chọn hệ tọa độ có dây dẫn dọc trục $Oz$ (dòng điện $I$ theo chiều $+\hat{z}$), đường thẳng chứa $M, N, P, Q$ là trục $Ox$ với $M(-a,0)$, $N(a,0)$, $P(b,0)$, $Q(-b,0)$ và chiều dòng điện trong khung là $M \to N \to P \to Q \to M$. Cảm ứng từ của dây thẳng dài vô hạn tại điểm cách trục một khoảng $r$ là $\vec{B} = \dfrac{\mu_0\mu I}{2\pi r}\,\hat{\varphi}$. Trên trục $Ox$ ta có $\hat{\varphi} = \pm\hat{y}$ tùy vào việc $x>0$ hay $x<0$, nên với mọi $x$
+\[
+\vec{B} = \frac{\mu_0\mu I}{2\pi x}\,\hat{y}.
+\]
+
+\textbf{Hai nửa đường tròn.} Trên cung tâm $O$, $d\vec{l}$ cùng phương với $\hat{\varphi}$ nên $d\vec{l} \parallel \vec{B}$ và $d\vec{F} = I_0\,d\vec{l} \times \vec{B} = \vec{0}$: hai cung không chịu lực.
+
+\textbf{Hai đoạn $NP$ và $QM$.} Cả hai đoạn có $d\vec{l} = dx\,\hat{x}$ (đoạn $NP$ có $x$ từ $a$ đến $b$, đoạn $QM$ có $x$ từ $-b$ đến $-a$), do đó
+\[
+d\vec{F} = I_0\,dx\,\hat{x} \times \frac{\mu_0\mu I}{2\pi x}\,\hat{y} = \frac{\mu_0\mu I I_0}{2\pi}\,\frac{dx}{x}\,\hat{z}.
+\]
+Lấy tích phân,
+\[
+\vec{F}_{NP} = \frac{\mu_0\mu I I_0}{2\pi}\ln\frac{b}{a}\,\hat{z},
+\qquad
+\vec{F}_{QM} = \frac{\mu_0\mu I I_0}{2\pi}\ln\frac{a}{b}\,\hat{z} = -\vec{F}_{NP}.
+\]
+Vậy hợp lực $\vec{F}_{NP} + \vec{F}_{QM} = \vec{0}$ và hai lực song song với dây, ngược chiều, cùng độ lớn
+\[
+F = \frac{\mu_0\mu I I_0}{2\pi}\ln\frac{b}{a}.
+\]
+Các lực từ lên khung do đó tạo thành một \textbf{ngẫu lực}.
+
+\textbf{Momen của ngẫu lực.} Lấy momen đối với $O$, phần tử $d\vec{l}$ tại $\vec{r} = x\,\hat{x}$ có
+\[
+d\vec{\mathcal{M}} = x\,\hat{x} \times d\vec{F} = \frac{\mu_0\mu I I_0}{2\pi}\,dx\;\hat{x}\times\hat{z} = -\frac{\mu_0\mu I I_0}{2\pi}\,dx\,\hat{y}.
+\]
+Hai đoạn đều cho đóng góp cùng chiều, mỗi đoạn có $\int dx = b - a$, nên
+\[
+\vec{\mathcal{M}} = -\frac{\mu_0\mu I I_0}{\pi}\,(b-a)\,\hat{y},
+\qquad
+\boxed{\mathcal{M} = \frac{\mu_0\mu I I_0\,(b-a)}{\pi}}
+\]
+Trục quay nằm trong mặt phẳng của khung và vuông góc với đường $MNPQ$. Kiểm tra: khi $b \to a$ khung co lại thành đường và $\mathcal{M} \to 0$; khi $I \to 0$ hoặc $I_0 \to 0$ thì $\mathcal{M} \to 0$; thứ nguyên $[\mu_0 I I_0 (b-a)] = \dfrac{\text{N}}{\text{A}^2}\cdot\text{A}^2\cdot\text{m} = \text{N}\cdot\text{m}$.
+\end{sol}
+% [ADDED BY CLAUDE]
 
 % =====================================================================
 %  PHẦN TIẾP THEO — soạn từ vở viết tay "Chương 5: Từ Trường"
